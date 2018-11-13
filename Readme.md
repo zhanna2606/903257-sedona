@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Zhanna D](https://up.htmlacademy.ru/htmlcss/23/user/903257).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Вервинский] (https://htmlacademy.ru/profile/id13802).
 
 ---
 
