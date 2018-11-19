@@ -5,43 +5,107 @@
     <title>Седона</title>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li><a class="button" href="info.html"></a>Информация</li>
-          <li><a class="button" href="photo-video.html"></a>Фото и видео</li>
-          <li><a class="button" href="map.html"></a>Карта штата</li>
-          <li><a class="button" href="hotels.html"></a>Гостиницы</li>
+      <header class="main-header">
+          <nav class="main-navigation">
+            <ul class="site-navigation">
+              <li><a href="info.html">Информация</a></li>
+              <li><a href="photo-video.html">Фото и видео</a></li>
+              <li><a href="map.html">Карта штата</a></li>
+              <li class="site-navigation-current"><a>Гостиницы</a></li>
         </ul>
       </nav>
-      <a class="main-header-logo">
+      <a class="main-header-logo" href="index.html">
       <img src="img/index.logo.svg" width="100" height="100" alt="Логотип">
       </a>
     </header>
     <main class="conteiner">
-      <h1 class="visual-hidden">Седона</h1>
-      <img src="main/index.pic.svg" width="800" height="500" alt="Главное изображение страницы">
-      <h2>Седона-небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        <!--здесь будет все остальное-->
+      <section class="filters">
+        <h2 class="visual-hidden">Фильтр поиска отеля</h2>
+        <!--Здесь будет фильтр-форма поиска отеля-->
+      </section>
+      <section class="catalog">
+          <h2 class="visual-hidden">Список отелей</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <h3>
+                <a href="catalog-item.html">
+                  <span class="catalog-item-title">AMARA RESORT & SPA</span>
+                  <span class="catalog-category">Гостиница</span>
+                  <span class="catalog-item-price">от 4000 р.</span>
+                </a>
+              </h3>
+              <p class="catalog-item-image">
+                  <a href="catalog-item.html">
+                    <img src="img/hotel-1.jpg" width="200" height="160" alt="Гостиница AMARA RESORT & SPA">
+                  </a>
+                </p>
+              <p class="hotel-raiting">Рейтинг: 8,5</p>
+              <img src="img/hotel5stars.svg" width="30" height="10" alt="Отель пять звезд">
+              <p>
+                <a class="button" href="catalog-item.html">Подробнее</a>
+                <a class="button" href="#">Забронировать</a>
+              </p>
+            </li>
+            <li class="catalog-item">
+                <h3>
+                  <a href="catalog-item.html">
+                    <span class="catalog-item-title">DESERT QUAIL INN</span>
+                    <span class="catalog-category">Мотель</span>
+                    <span class="catalog-item-price">от 3000 р.</span>
+                  </a>
+                </h3>
+                <p class="catalog-item-image">
+                    <a href="catalog-item.html">
+                      <img src="img/hotel-2.jpg" width="200" height="160" alt="Мотель Desert Quail Inn">
+                    </a>
+                  </p>
+                <p class="hotel-raiting">Рейтинг: 8,9</p>
+                <img src="img/hotel3stars.svg" width="30" height="10" alt="Отель три звезды">
+                <p>
+                  <a class="button" href="catalog-item.html">Подробнее</a>
+                  <a class="button" href="#">Забронировать</a>
+                </p>
+              </li>
+              <li class="catalog-item">
+                  <h3>
+                    <a href="catalog-item.html">
+                      <span class="catalog-item-title">Villas at Poco Diablo</span>
+                      <span class="catalog-category">Апартаменты</span>
+                      <span class="catalog-item-price">от 2000 р.</span>
+                    </a>
+                  </h3>
+                  <p class="catalog-item-image">
+                      <a href="catalog-item.html">
+                        <img src="img/hotel-3.jpg" width="200" height="160" alt="Апартаменты Villas at Poco Diablo">
+                      </a>
+                    </p>
+                  <p class="hotel-raiting">Рейтинг: 9,2</p>
+                  <img src="img/hotel2stars.svg" width="30" height="10" alt="Отель две звезды">
+                  <p>
+                    <a class="button" href="catalog-item.html">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </p>
+                </li>
+          </ul>
+      </section>
       </main>
-    <footer class="main-footer">
-      <p class="footer-link">
-      <a class="hashtag-link" href="#">#visitsedone</a>
-      </p>
-      <div class="footer-social">
-        <ul>
-          <li><a class="button social" href="#"></a>Твиттер</li>
-          <li><a class="button social" href="#"></a>Фэйсбук</li>
-          <li><a class="button social" href="#"></a>Ютуб</li>
-        </ul>
-      </div>
-      <p class="footer-copyright">
-        Website by
-        <a class="button" href="https://htmlacademy.ru">
-          <img src="img/index.copyright.svg" width="80" height="30" alt="Логотип Html Academy">
-        </a>
-      </p>
-    </footer>
+      <footer class="main-footer">
+          <p class="footer-link">
+          <a class="hashtag-link" href="#">#visitsedone</a>
+          </p>
+          <div class="footer-social">
+            <ul>
+              <li><a class="button social" href="#">Твиттер</a></li>
+              <li><a class="button social" href="#">Фэйсбук</a></li>
+              <li><a class="button social" href="#">Ютуб</a></li>
+            </ul>
+          </div>
+          <p class="footer-copyright">
+            Website by
+            <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/index.copyright.svg" width="80" height="30" alt="Логотип Html Academy">
+            </a>
+          </p>
+        </footer>
   </body>
 </html>
