@@ -16,7 +16,7 @@
         <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
-    <a class="main-header-logo">
+    <a class="main-header-logo" aria-label="Логотип сайта">
       <img src="svg-sedona/logo-sedona.svg" width="140" height="71" alt="Логотип">
     </a>
   </header>
@@ -31,7 +31,6 @@
       <h2>Седона-небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </section>
-    <!--Тут начало доп разметки оставшей страницы-->
     <section class="advantage">
       <h2>Настоящий городок</h2>
       <p>— №1 — Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -54,7 +53,6 @@
         </li>
       </ul>
     </section>
-
     <section class="advantage">
       <h2>Там есть Мост дьявола</h2>
       <p>— №2 — Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -74,17 +72,35 @@
         </li>
       </ul>
     </section>
-
-    <!--здесь окончание разметки доп задания-->
     <section class="search-hotel">
       <h2 class="visually-hidden">Поиск отеля</h2>
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-      <p><a class="button" href="search-form.html">Поиск гостиницы в Седоне</a></p>
+      <button class="button search-hotel">Поиск гостиницы в Седоне</button>
     </section>
     <section class="modal modal-search-form">
       <h2 class="visually-hidden">Форма поиска отеля</h2>
-      <!--Здесь будет форма-->
+      <form action="hotels.html" method="post">
+        <label for="date-check-in">
+          Дата заезда:<input type="text" required name="date-check-in" value="24 апреля 2017">
+        <!--Если тут поставить type date то значение по умолчанию затрется на ДД.ММ.ГГГГ
+        значок календарика будем ставить в CSS как background потом?-->
+        </label>
+        <label for="date-check-out">
+          Дата выезда:<input type="text" required name="date-check-out" value="4 июля 2017">
+        </label>
+        <label for="adult">
+          Взрослые:<input type="number" required min="1" name="adult" value="2">
+        </label>
+        <!--как обозначить кнопки плюс и минус в поле ввода-->
+        <button name="plus">+</button>
+        <button name="minus">-</button>
+        <!--Сделала так-->
+        <label for="children">
+          Дети:<input type="number" required name="children" value="0">
+        </label>
+        <a href="hotels.html" class="button" aria-label="Начать поиск">Найти</a>
+      </form>
     </section>
     <!--Вставила карту-->
     <div>
@@ -93,22 +109,22 @@
   </main>
   <footer class="main-footer">
     <p class="footer-link">
-      <a class="hashtag-link" href="#">#visitsedone</a>
+      <a class="hashtag-link" href="#">#visitsedona</a>
     </p>
     <div class="footer-social">
       <ul>
         <li>
-          <a class="button social" href="#">
+          <a class="button social" href="#" aria-label="Седона в Твиттере">
             <img src="svg-sedona/twitter.svg" class="twitter" alt="Твиттер">Твиттер
           </a>
         </li>
         <li>
-          <a class="button social" href="#">Фэйсбук
+          <a class="button social" href="#" aria-label="Седона на Фейсбуке">Фэйсбук
             <img src="svg-sedona/fb-icon.svg" class="fb-icon" alt="Фэйсбук">
           </a>
         </li>
         <li>
-          <a class="button social" href="#">Ютуб
+          <a class="button social" href="#" aria-label="Седона на Ютубе">Ютуб
             <img src="svg-sedona/youtube.svg" class="youtube" alt="Ютуб">
           </a>
         </li>
@@ -116,7 +132,7 @@
     </div>
     <p class="footer-copyright">
       Website by
-      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
         <img src="svg-sedona/logo-htmlacademy.svg" width="115" height="40" alt="Логотип Html Academy">
       </a>
     </p>
