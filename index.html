@@ -81,22 +81,22 @@
     <section class="modal modal-search-form">
       <h2 class="visually-hidden">Форма поиска отеля</h2>
       <form action="hotels.html" method="post">
-        <label for="date-check-in">
+        <label class="date-check-in">
           Дата заезда:<input type="text" required name="date-check-in" value="24 апреля 2017">
         <!--Если тут поставить type date то значение по умолчанию затрется на ДД.ММ.ГГГГ
         значок календарика будем ставить в CSS как background потом?-->
         </label>
-        <label for="date-check-out">
+        <label class="date-check-out">
           Дата выезда:<input type="text" required name="date-check-out" value="4 июля 2017">
         </label>
-        <label for="adult">
+        <label class="adult">
           Взрослые:<input type="number" required min="1" name="adult" value="2">
         </label>
         <!--как обозначить кнопки плюс и минус в поле ввода-->
         <button name="plus">+</button>
         <button name="minus">-</button>
         <!--Сделала так-->
-        <label for="children">
+        <label class="children">
           Дети:<input type="number" required name="children" value="0">
         </label>
         <a href="hotels.html" class="button" aria-label="Начать поиск">Найти</a>

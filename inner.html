@@ -26,27 +26,27 @@
       <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон фильтра поиска">
       <!--Здесь будет фильтр-форма поиска отеля-->
       <form action="#" method="post">
-        <fieldset>
+        <fieldset class="infrastructure">
           <legend>Инфрастурктура</legend>
-          <label for="pool">
+          <label class="infrastructure-item">
             Бассейн<input type="checkbox" checked name="pool">
           </label>
-          <label for="parking">
+          <label class="infrastructure-item">
             Парковка<input type="checkbox" name="parking">
           </label>
-          <label for="wifi">
+          <label class="infrastructure-item">
             Wi-Fi<input type="checkbox" name="wifi">
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="type-house">
           <legend>Тип жилья</legend>
-          <label for="hotel">
+          <label class="type-house-item">
             Гостиница<input type="checkbox" checked name="hotel">
           </label>
-          <label for="motel">
+          <label class="type-house-item">
             Мотель<input type="checkbox" checked name="motel">
           </label>
-          <label for="apart">
+          <label class="type-house-item">
             Апартаменты<input type="checkbox" checked name="apart">
           </label>
         </fieldset>
@@ -54,8 +54,6 @@
           <legend>Стоимость в сутки (Р):</legend>
           <!--Тут я пока не понимаю как делать-->
           <input type="submit" value="Показать">
-
-          </button>
         </fieldset>
 
       </form>
