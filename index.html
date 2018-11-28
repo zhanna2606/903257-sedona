@@ -76,40 +76,39 @@
       <h2 class="visually-hidden">Поиск отеля</h2>
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-      <button class="button search-hotel">Поиск гостиницы в Седоне</button>
+      <a class="button" href="search-form.html">Поиск гостиницы в Седоне</a>
     </section>
     <section class="modal modal-search-form">
       <h2 class="visually-hidden">Форма поиска отеля</h2>
-      <form action="hotels.html" method="post">
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <label class="date-check-in">
           Дата заезда:<input type="text" required name="date-check-in" value="24 апреля 2017">
-        <!--Если тут поставить type date то значение по умолчанию затрется на ДД.ММ.ГГГГ
+          <!--Если тут поставить type date то значение по умолчанию затрется на ДД.ММ.ГГГГ
         значок календарика будем ставить в CSS как background потом?-->
         </label>
         <label class="date-check-out">
           Дата выезда:<input type="text" required name="date-check-out" value="4 июля 2017">
         </label>
-        <label class="adult">
-          Взрослые:<input type="number" required min="1" name="adult" value="2">
+        <button type="button" name="minus">-</button>
+        <label class="adult">Взрослые:
+          <input type="number" required min="1" name="adult" value="2">
         </label>
-        <!--как обозначить кнопки плюс и минус в поле ввода-->
-        <button name="plus">+</button>
-        <button name="minus">-</button>
-        <!--Сделала так-->
-        <label class="children">
-          Дети:<input type="number" required name="children" value="0">
+        <button type="button" name="plus">+</button>
+        <button type="button" name="minus">-</button>
+        <label class="children">Дети:
+          <input type="number" required name="children" value="0">
         </label>
-        <a href="hotels.html" class="button" aria-label="Начать поиск">Найти</a>
+        <button type="button" name="plus">+</button>
+        <button type="submit" class="search" aria-label="Начать поиск">Найти</button>
       </form>
     </section>
-    <!--Вставила карту-->
     <div>
       <img src="img/map.jpg" width="1200" height="593" alt="Карта">
     </div>
   </main>
   <footer class="main-footer">
     <p class="footer-link">
-      <a class="hashtag-link" href="#">#visitsedona</a>
+      <a class="hashtag-link" href="#" aria-label="хэштег">#visitsedona</a>
     </p>
     <div class="footer-social">
       <ul>
@@ -132,7 +131,7 @@
     </div>
     <p class="footer-copyright">
       Website by
-      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
+      <a class="button copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
         <img src="svg-sedona/logo-htmlacademy.svg" width="115" height="40" alt="Логотип Html Academy">
       </a>
     </p>

@@ -13,10 +13,10 @@
         <li><a href="info.html">Информация</a></li>
         <li><a href="photo-video.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
-        <li class="site-navigation-current"><a>Гостиницы</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
-    <a class="main-header-logo" href="index.html">
+    <a class="main-header-logo" href="index.html" aria-label="Логотип сайта">
       <img src="svg-sedona/logo-sedona.svg" width="140" height="71" alt="Логотип">
     </a>
   </header>
@@ -24,8 +24,7 @@
     <section class="filters">
       <h2 class="visually-hidden" aria-label="фильтр поиска отеля">Фильтр поиска отеля</h2>
       <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон фильтра поиска">
-      <!--Здесь будет фильтр-форма поиска отеля-->
-      <form action="#" method="post">
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="infrastructure">
           <legend>Инфрастурктура</legend>
           <label class="infrastructure-item">
@@ -57,7 +56,6 @@
         </fieldset>
 
       </form>
-      <!--Конец формы-->
     </section>
     <section class="catalog">
       <h2 class="visually-hidden" aria-label="Список отелей">Список отелей</h2>
@@ -133,7 +131,7 @@
   </main>
   <footer class="main-footer">
     <p class="footer-link">
-      <a class="hashtag-link" href="#">#visitsedona</a>
+      <a class="hashtag-link" href="#" aria-label="Хэштег">#visitsedona</a>
     </p>
     <div class="footer-social">
       <ul>
@@ -156,7 +154,7 @@
     </div>
     <p class="footer-copyright">
       Website by
-      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
+      <a class="button copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
         <img src="svg-sedona/logo-htmlacademy.svg" width="115" height="40" alt="Логотип Html Academy">
       </a>
     </p>
