@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,7 +15,7 @@
         <li><a href="info.html">Информация</a></li>
         <li><a href="photo-video.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li><a href="inner.html">Гостиницы</a></li>
       </ul>
     </nav>
     <a class="main-header-logo" aria-label="Логотип сайта">
@@ -89,16 +91,22 @@
         <label class="date-check-out">
           Дата выезда:<input type="text" required name="date-check-out" value="4 июля 2017">
         </label>
-        <button type="button" name="minus">-</button>
-        <label class="adult">Взрослые:
-          <input type="number" required min="1" name="adult" value="2">
-        </label>
-        <button type="button" name="plus">+</button>
-        <button type="button" name="minus">-</button>
-        <label class="children">Дети:
-          <input type="number" required name="children" value="0">
-        </label>
-        <button type="button" name="plus">+</button>
+        <label for="adult">Взрослые:</label>
+        <button type="button" name="minus">
+          <span class="visually-hidden">уменьшить количество на единицу</span>
+          -</button>
+        <input type="number" id="adult" required min="1" name="adult" value="2">
+        <button type="button" name="plus">
+          <span class="visually-hidden">увеличить количество на единицу</span>
+          +</button>
+        <label for="children">Дети:</label>
+        <button type="button" name="minus">
+          <span class="visually-hidden">уменьшить количество на единицу</span>
+          -</button>
+        <input type="number" id="children" required name="children" value="0">
+        <button type="button" name="plus">
+          <span class="visually-hidden">увеличить количество на единицу</span>
+          +</button>
         <button type="submit" class="search" aria-label="Начать поиск">Найти</button>
       </form>
     </section>
