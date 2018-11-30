@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -38,23 +39,25 @@
       <p>— №1 — Седона — не аттракцион для туристов, там течёт своя жизнь</p>
       <img src="img/photo-city.jpg" class="photo-city" width="800" height="256" alt="Фото Седоны">
     </section>
-    <section class="features">
-      <h2 class="visually-hidden">Особенности</h2>
-      <ul>
-        <li class="features-item">
-          <img src="svg-sedona/icon-1.svg" width="75" height="72" alt="Жилье">Жильё
-          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-        </li>
-        <li class="features-item">Еда
-          <img src="svg-sedona/icon-3.svg" width="74" height="70" alt="Еда">
-          <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
-        </li>
-        <li class="features-item">Сувениры
-          <img src="svg-sedona/icon-3.svg" width="64" height="76" alt="Сувениры">
-          <p>Не только китайского, но и местного производства!</p>
-        </li>
-      </ul>
-    </section>
+    <div class="index-columns">
+      <section class="features">
+        <h2 class="visually-hidden">Особенности</h2>
+        <ul>
+          <li class="features-item">
+            <img src="svg-sedona/icon-1.svg" width="75" height="72" alt="Жилье">Жильё
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </li>
+          <li class="features-item">Еда
+            <img src="svg-sedona/icon-3.svg" width="74" height="70" alt="Еда">
+            <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+          </li>
+          <li class="features-item">Сувениры
+            <img src="svg-sedona/icon-3.svg" width="64" height="76" alt="Сувениры">
+            <p>Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+      </section>
+    </div>
     <section class="advantage">
       <h2>Там есть Мост дьявола</h2>
       <p>— №2 — Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -74,12 +77,14 @@
         </li>
       </ul>
     </section>
-    <section class="search-hotel">
-      <h2 class="visually-hidden">Поиск отеля</h2>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-      <a class="button" href="search-form.html">Поиск гостиницы в Седоне</a>
-    </section>
+    <div class="index-columns">
+      <section class="search-hotel">
+        <h2 class="visually-hidden">Поиск отеля</h2>
+        <div class="interest">Заинтересовались?</div>
+        <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <a class="button-search" href="search-form.html">Поиск гостиницы в Седоне</a>
+      </section>
+    </div>
     <section class="modal modal-search-form">
       <h2 class="visually-hidden">Форма поиска отеля</h2>
       <form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -91,7 +96,7 @@
         <label class="date-check-out">
           Дата выезда:<input type="text" required name="date-check-out" value="4 июля 2017">
         </label>
-        <label for="adult">Взрослые:</label>
+        <label for="adult" class="adult">Взрослые:</label>
         <button type="button" name="minus">
           <span class="visually-hidden">уменьшить количество на единицу</span>
           -</button>
@@ -99,7 +104,7 @@
         <button type="button" name="plus">
           <span class="visually-hidden">увеличить количество на единицу</span>
           +</button>
-        <label for="children">Дети:</label>
+        <label for="children" class="children">Дети:</label>
         <button type="button" name="minus">
           <span class="visually-hidden">уменьшить количество на единицу</span>
           -</button>
