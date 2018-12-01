@@ -6,6 +6,7 @@ body {
     line-height: 21px;
     color: #000000;
     text-align: center;
+    text-transform: uppercase;
 }
 
 a {
@@ -16,7 +17,6 @@ a {
     font-weight: bold;
     line-height: 26px;
     color: #000000;
-    text-transform: uppercase;
 }
 .site-navigation {
     list-style: none;
@@ -43,9 +43,6 @@ a {
 .about-city {
     line-height: 26px;
     color: #000000;
-    text-transform: uppercase;
-
-    text-align: center;
 }
 .about-city h2 {
     font-size: 21px;
@@ -56,7 +53,6 @@ a {
 }
 .advantage {
     color: #ffffff;
-    text-transform: uppercase;
     background-color: #81b3d2
 }
 
@@ -66,12 +62,9 @@ a {
 }
 
 /*Проверить размер шрифтов для этой секции. Плюс убрать изображения из верстки. Они не контентные, а декоративные.*/
-.features {
-    list-style: none;
-    text-transform: uppercase;
-    text-align: center;
-}
+
 .features-item {
+    list-style: none;
     font-size: 21px;
     font-weight: bold;
 }
@@ -81,12 +74,8 @@ a {
     color: #333333;
 }
 
-.attractions {
-    list-style: none;
-    text-transform: uppercase;
-    text-align: center;
-}
 .attraction-item {
+    list-style: none;
     font-size: 21px;
     font-weight: bold;
 }
@@ -97,12 +86,7 @@ a {
     color: #333333;
 }
 
-.search-hotel {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.search-hotel .interest {
+.search-hotel div {
     font-size: 30px;
     font-weight: bold;
     line-height: 36px;
@@ -131,13 +115,13 @@ a {
     background-color: #604e43; 
 }
 .button-search:active {
+    color: rgba(255,255,255, 0.3);
     background-color: #503e33;
 }
 .modal-search-form {
     font-weight: bold;
     line-height: 26px;
     text-align: left;
-    text-transform: uppercase;
     width: 568px;
     height: 395px;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
@@ -180,7 +164,7 @@ a {
 
 .search:active {
     background-color: #5496bd;
-    color: rgba 255 255 255, 0.3;
+    color: rgba(255,255,255,0.3);
     font-size: 21px;
 }
 
@@ -245,7 +229,6 @@ p.footer-copyright {
     font-weight: normal;
     color: #ffffff;
     text-align: left;
-    text-transform: uppercase;
     }
 
 .filters legend {
@@ -315,10 +298,9 @@ a.detailed:hover,
 a.detailed:focus {
     background-color: #669ec0;
 }
-/* тут тоже не срабатывает смена цвета шрифта. Что не так?*/
-/*Проверь синтаксис, не правильно используешь.*/
+
 .catalog .detailed:active {
-    color: rgba 255 255 255, 0.3;
+    color: rgba(255,255,255, 0.3);
     background-color: #5496bd;
 }
 
@@ -328,6 +310,7 @@ a.booking:focus {
 }
 
 a.booking:active {
+    color: rgba(255,255,255, 0.3);
     background-color: #503e33;
 }
 
