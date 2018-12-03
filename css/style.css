@@ -28,9 +28,9 @@ a {
 .site-navigation a:focus {
     color: #81b3d2;
 }
-/* почему-то не срабатывает? что-то не то пишу? */
+
 .site-navigation a:active {
-    color: rgba 0 0 0, 0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 .site-navigation-current a{
     color: #766357;
@@ -61,8 +61,6 @@ a {
     font-weight: bold;
 }
 
-/*Проверить размер шрифтов для этой секции. Плюс убрать изображения из верстки. Они не контентные, а декоративные.*/
-
 .features-item {
     list-style: none;
     font-size: 21px;
@@ -75,7 +73,7 @@ a {
 }
 
 .attraction-item {
-    list-style: none;
+    list-style: none; 
     font-size: 21px;
     font-weight: bold;
 }
@@ -181,6 +179,7 @@ a {
 .footer-social a {
     width: 46px;
     height: 48px;
+    fill: #FFF;
     background-color: #81b3d2;
 }
 
@@ -190,6 +189,7 @@ a {
 }
 
 .footer-social a:active{
+    opacity: 0.3;
     background-color: #5496bd;
 }
 
@@ -197,24 +197,24 @@ p.footer-copyright {
     line-height: 26px;
     font-weight: normal;
 }
-/* пока затрудняюсь как сделать тут, наверно качать разного цвета картинки и вставлять
-.footer-copyright a {
-    background: url("../svg-sedona/logo-htmlacademy.svg");
-    display: block;
+
+.footer-copyright svg {
     width: 115px;
     height: 41px;
+    fill: #231f20;
+}
+/*работает только при наведении на контур картинки, а не на область вокруг нее*/
+
+
+
+.footer-copyright svg:hover, 
+.footer-copyright svg:focus {
+    fill: #81b3d2;
 }
 
-.footer-copyright a:hover,
-.footer-copyright a:focus {
-    background: url("../svg-sedona/logo-htmlacademy-blue.svg");
+.footer-copyright svg:active {
+    fill:#bdbbbc;
 }
-
-.footer-copyright a:active {
-    background: url("../svg-sedona/logo-htmlacademy-gray.svg");
-}
-*/
-
 
  /* css inner.html */
  
@@ -254,6 +254,16 @@ p.footer-copyright {
     background: transparent;
 }
 /* тут нужно вставить чекбоксы on и off, но как пока не знаю*/
+
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+    color: #81b3d2;
+}
+
+.catalog-item a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
 
 .catalog-list {
     text-transform: uppercase;
@@ -315,4 +325,52 @@ a.booking:active {
 }
 
 
-/* ----- Сеточные стили ----- */
+/* ----- Сеточные стили -----*/
+html,
+body {
+    min-width: 1122px;
+    min-height: 1750px;
+}
+
+.main-header {
+    margin-bottom: 75px;
+
+    /* Временно для сетки */
+    min-height: 285px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+
+/* Временно для сетки */
+    min-height: 285px;
+
+}
+
+.main-header-logo {
+    width: 244px;
+    order: 1;
+    width: 140px;
+    height: 71px;
+
+    /* Временно для сетки */
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+
+    /* Временно для сетки */
+    min-height: 70px;
+}
+
+.site-navigation {
+    width: 956px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+     /* Временно для сетки */
+    min-height: 70px;
+}
+
