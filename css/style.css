@@ -322,6 +322,14 @@ a.booking:active {
     background-color: #503e33;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 
 /* ----- Сеточные стили -----*/
 html,
@@ -331,12 +339,19 @@ body {
 }
 
 .main-header {
+    width: 1200px;
+    padding: 0;
+    margin-left: 0;
     margin-bottom: 56px;
 }
 
 .main-navigation {
     display: flex;
     width: 1200px;
+}
+
+.main-header-logo {
+    position: absolute;
 }
 
 .site-navigation {
@@ -347,7 +362,13 @@ body {
     padding: 22px;
 }
 
-.main-header-logo {
-    position: absolute center;
+.main-view {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
 }
+
+
 
