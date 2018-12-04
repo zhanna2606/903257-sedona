@@ -188,7 +188,7 @@ a {
     background-color: #669ec0;
 }
 
-.footer-social a:active{
+.footer-social svg:active{
     opacity: 0.3;
     background-color: #5496bd;
 }
@@ -202,10 +202,8 @@ p.footer-copyright {
     width: 115px;
     height: 41px;
     fill: #231f20;
+    background: #FFF;
 }
-/*работает только при наведении на контур картинки, а не на область вокруг нее*/
-
-
 
 .footer-copyright svg:hover, 
 .footer-copyright svg:focus {
@@ -218,7 +216,7 @@ p.footer-copyright {
 
  /* css inner.html */
  
- /* это временный бэкграунд */
+ /* это временный бэкграунд для фильтра*/
 .filters fieldset {
     background-color: #666666;
 }
@@ -328,49 +326,28 @@ a.booking:active {
 /* ----- Сеточные стили -----*/
 html,
 body {
-    min-width: 1122px;
-    min-height: 1750px;
+    min-width: 1200px;
+    min-height: 2762px;
 }
 
 .main-header {
-    margin-bottom: 75px;
-
-    /* Временно для сетки */
-    min-height: 285px;
+    margin-bottom: 56px;
 }
 
 .main-navigation {
     display: flex;
-    align-items: center;
-
-/* Временно для сетки */
-    min-height: 285px;
-
-}
-
-.main-header-logo {
-    width: 244px;
-    order: 1;
-    width: 140px;
-    height: 71px;
-
-    /* Временно для сетки */
-}
-
-.main-navigation-wrapper {
-    width: 100%;
-
-    /* Временно для сетки */
-    min-height: 70px;
+    width: 1200px;
 }
 
 .site-navigation {
-    width: 956px;
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
     margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 22px;
+}
 
-     /* Временно для сетки */
-    min-height: 70px;
+.main-header-logo {
+    position: absolute center;
 }
 
