@@ -332,43 +332,67 @@ a.booking:active {
 
 
 /* ----- Сеточные стили -----*/
-html,
-body {
-    min-width: 1200px;
-    min-height: 2762px;
-}
 
+/*навигация*/
 .main-header {
-    width: 1200px;
-    padding: 0;
-    margin-left: 0;
-    margin-bottom: 56px;
-}
-
-.main-navigation {
-    display: flex;
-    width: 1200px;
+    max-width: 1200;
+    max-height: 56px;
+    margin: 0 auto;
 }
 
 .main-header-logo {
     position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .site-navigation {
     display: flex;
-    width: 1200px;
-    justify-content: space-around;
-    margin: 0;
-    padding: 22px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
 }
 
-.main-view {
-    margin: 0;
-    padding: 0;
-    width: 1200px;
-    display: flex;
-    flex-direction: column;
+li {
+    width: 239px;
+    height: 56px;
+    padding: 12px;
+    margin: 0 auto;
 }
+
+li:nth-child(1),
+li:nth-child(2) {
+    text-align: left;
+}
+
+li:nth-child(3),
+li:nth-child(4) {
+    text-align: right;
+}
+
+/* бэкграунд*/
+
+.background-photo {
+    width: 1200px;
+    height: 773px;
+    margin: 0 auto;
+    background: url("../img/background-photo.jpg") no-repeat;
+}
+
+.intro-welcome {
+    width: 459px;
+    height: 353px;
+    background: url("../svg-sedona/intro-welcome.svg")no-repeat;
+    background-position: center center;
+}
+
+.intro-mask {
+    width: 1201px;
+    height: 59px;
+    background: url("../svg-sedona/intro-mask.svg") no-repeat;
+}
+
 
 
 
