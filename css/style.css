@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    
+    padding: 0;
     font-family: "PT Sans-Regular", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -11,6 +11,11 @@ body {
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .main-navigation {
@@ -44,23 +49,28 @@ a {
     line-height: 26px;
     color: #000000;
 }
-.about-city h2 {
+.about-city .about-city-top {
     font-size: 21px;
     font-weight: bold;
 }
-.about-city p {
+
+.about-city .about-city-desc {
     color: #333333;
 }
-.advantage {
+.advantage-city {
+    height: 256px;
     color: #ffffff;
-    background-color: #81b3d2
+    background-color: #81b3d2;
 }
 
-.advantage h2 {
+.advantage-city h2 {
     font-size: 21px;
     font-weight: bold;
+    margin-top: 46px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
-
+    
 .features-item {
     list-style: none;
     font-size: 21px;
@@ -84,14 +94,16 @@ a {
     color: #333333;
 }
 
-.search-hotel div {
+.search-hotel .interest {
     font-size: 30px;
     font-weight: bold;
     line-height: 36px;
 }
 
-.search-hotel p {
+.interest p {
+    font-size: 14px;
     line-height: 24px;
+    padding-bottom: 52px;
     color: #333333;
 }
 
@@ -100,13 +112,15 @@ a {
     font-weight: bold;
     line-height: 26px;
     color: #ffffff;
+    padding-top: 35px;
+    padding-bottom: 33px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .button-search {
     width: 568px;
-    height: 86px;
     background-color: #766357;
-    border: none;
 }
 .button-search:hover,
 .button-search:focus {
@@ -116,15 +130,7 @@ a {
     color: rgba(255,255,255, 0.3);
     background-color: #503e33;
 }
-.modal-search-form {
-    font-weight: bold;
-    line-height: 26px;
-    text-align: left;
-    width: 568px;
-    height: 395px;
-    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-    background-color: #ffffff;
-}
+
 
 .date-check-in input,
 .date-check-out input {
@@ -322,12 +328,22 @@ a.booking:active {
     background-color: #503e33;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -345,13 +361,19 @@ a.booking:active {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
 .site-navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
     margin: 0 auto;
+}
+
+.site-navigation a {
+    display: block;
 }
 
 li {
@@ -371,28 +393,231 @@ li:nth-child(4) {
     text-align: right;
 }
 
-/* бэкграунд*/
 
 .background-photo {
-    width: 1200px;
-    height: 773px;
-    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
     background: url("../img/background-photo.jpg") no-repeat;
+    background-size: cover;
+    
+  
 }
 
 .intro-welcome {
     width: 459px;
     height: 353px;
-    background: url("../svg-sedona/intro-welcome.svg")no-repeat;
-    background-position: center center;
+    
 }
 
-.intro-mask {
-    width: 1201px;
-    height: 59px;
-    background: url("../svg-sedona/intro-mask.svg") no-repeat;
+.background-photo::before {
+    content: '';
+    height: 70px;
+    background: url("../svg-sedona/intro-mask.svg") center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+  }
+
+.about-city {
+    padding: 0;
+    margin-top: -17px;
 }
 
+.about-city-top {
+    padding-top: 55px;    
+    padding-left: 360px;
+    padding-right: 360px;
+}
 
+.about-city-desc {
+    margin-top: 38px;
+    padding-bottom: 45px;
+}
 
+.advantage-city {
+    display: flex;
+}
 
+.description-city {
+    text-align: center;
+    vertical-align: justify;
+    padding-left: 60px;
+    padding-right: 70px;
+    padding-bottom: 46px;
+}
+
+.city-number {
+    padding: 20px;
+}
+
+.city-desc {
+    margin-left: -5px;
+}
+
+.photo-city {
+    width: 100%;
+}
+
+.advantage-bridge {
+    height: 256px;
+    color: #ffffff;
+    background-color: #81b3d2;
+    display: flex;
+}
+
+.photo-bridge {
+    margin-right: 0;
+    padding-right:50px;
+}
+
+.description-bridge {
+    width: 303px;
+    height: 142px;
+    text-align: center;
+    vertical-align: justify;
+    margin-top: 50px;
+    padding-right: 49px;
+}
+
+.description-bridge h2 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bridge-number {
+    padding: 20px;
+}
+
+.bridge-desc {
+    margin: 0 20px;
+}
+
+.features {
+    margin-bottom: 85px;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.features-item {
+    width: 285px;
+    
+    text-align: center;
+}
+
+.features-item p {
+    margin: 20px 10px;
+}
+
+.attractions {
+    margin-bottom: 85px;
+}
+
+.attractions-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.attraction-item {
+    width: 285px;
+    
+    text-align: center;
+}
+
+.attractions-item p {
+    margin: 20px 10px;
+}
+
+.modal-search-form {
+    color: #000000;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: left;
+    width: 568px;
+    height: 395px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filter-item {
+    width: 460px;
+}
+
+.main-footer {
+    padding: 30px 0;
+    margin-top: 36px;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-link a {
+    width: 136px;
+    margin: 0;
+    margin-left: 132px;
+
+}
+
+.footer-social {  
+    width: 150px;
+    text-align: center;
+    margin-left: 256px;
+
+}
+
+.footer-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    padding: 0;
+    
+    list-style: none;
+}
+
+.button-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+}
+
+.footer-copyright {
+    width: 197px;
+    margin: 0;
+    margin-left: auto;
+    text-align: center;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-left: 11px;
+    position: relative;
+}
+
+.footer-copyright b::before {
+    content: "";
+    position: absolute;
+    right: 8px;
+}
