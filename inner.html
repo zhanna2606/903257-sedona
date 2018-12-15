@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/outline.css">
 </head>
 
 <body>
@@ -27,9 +26,11 @@
   <main class="container">
     <section class="filters">
       <h2 class="visually-hidden" aria-label="фильтр поиска отеля">Фильтр поиска отеля</h2>
-      <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон фильтра поиска">
+      <div class="filter-background">
+        <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон фильтра поиска">
+      </div>
       <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="infrastructure">
+        <div class="infrastructure">
           <legend>Инфрастурктура</legend>
           <label class="infrastructure-item">
             Бассейн<input type="checkbox" checked name="pool">
@@ -40,8 +41,8 @@
           <label class="infrastructure-item">
             Wi-Fi<input type="checkbox" name="wifi">
           </label>
-        </fieldset>
-        <fieldset class="type-house">
+        </div>
+        <div class="type-house">
           <legend>Тип жилья</legend>
           <label class="type-house-item">
             Гостиница<input type="checkbox" checked name="hotel">
@@ -52,15 +53,27 @@
           <label class="type-house-item">
             Апартаменты<input type="checkbox" checked name="apart">
           </label>
-        </fieldset>
-        <fieldset class="count">
-          <legend>Стоимость в сутки (Р):</legend>
-          <!--Тут я пока не понимаю как делать-->
-          <input type="submit" class="show" value="Показать">
-        </fieldset>
-
+        </div>
       </form>
     </section>
+    <div class="filter-range">
+      <div class="filter-range-title">Стоимость в сутки (р):</div>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+      </div>
+      <!--Фильтр сделан по демке-->
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+      <button class="btn-transparent" type="submit">Показать</button>
+    </div>
+    <!-- конец фильтра-->
+
     <section class="catalog">
       <h2 class="visually-hidden" aria-label="Список отелей">Список отелей</h2>
       <ul class="catalog-list">
