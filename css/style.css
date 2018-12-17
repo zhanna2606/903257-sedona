@@ -7,6 +7,16 @@ body {
     color: #000000;
     text-align: center;
     text-transform: uppercase;
+    background-color: #f2f2f2;
+}
+
+.container {
+    min-width: 768px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    box-shadow: 0 -5px 9px 2px #dbdbdb;
 }
 
 a {
@@ -18,15 +28,38 @@ img {
     height: auto;
 }
 
+.main-header {
+    position: relative;
+    max-width: 1200;
+    max-height: 56px;
+    margin: 0 auto;
+}
+
+.main-header-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .main-navigation {
     font-weight: bold;
     line-height: 26px;
     color: #000000;
 }
+
 .site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
+
     list-style: none;
 }
 .site-navigation a{
+    display: block;
+
     color: #000000;
 }
 .site-navigation a:hover,
@@ -45,7 +78,90 @@ img {
     color: #766357;
 }
 
+.site-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation li {
+    display: inline-block;
+    min-height: 56px;
+    padding-top: 17px;
+    margin: 0 auto;
+}
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2) {
+    text-align: left;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+    text-align: right;
+}
+
+.main-pic {
+    position: relative;
+    height: 450px;
+    padding-top: 61px;
+    background: url("../img/background-photo.jpg") no-repeat;
+    background-size: cover;
+}
+
+.main-pic img {
+    display: block;
+    width: 459px;
+    height: 353px;
+    margin: 0 auto;
+}
+
+.main-pic::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 59px;
+    background: url("../svg-sedona/intro-mask.svg") no-repeat;
+    background-size: 100% 59px;
+}
+
+
+/* переделка в html по-другому
+.background-photo {
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
+    background: url("../img/background-photo.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0px -80px;
+}
+
+.intro-welcome {
+    display: block;
+    width: 459px;
+    height: 353px;
+    margin: 0 auto;
+    
+}
+
+.background-photo::after {
+    content: "";
+    position: absolute;
+    bottom: 88px;
+    left: 0;
+    display: block;
+    height: 70px;
+    background: url("../svg-sedona/intro-mask.svg") no-repeat;
+    background-size: cover;
+  }
+*/
+
+/* ---------------Преимущества---------------*/
 .about-city {
+    padding: 0;
+    margin-top: -17px;
     line-height: 26px;
     color: #000000;
 }
@@ -57,19 +173,49 @@ img {
 .about-city .about-city-desc {
     color: #333333;
 }
+
+.about-city-top {
+    padding-top: 55px;    
+    padding-left: 360px;
+    padding-right: 360px;
+}
+
+.about-city-desc {
+    margin-top: 38px;
+    padding-bottom: 45px;
+}
+
 .advantage-city {
-    height: 256px;
+    display: flex;
+    max-height: 254px;
     color: #ffffff;
     background-color: #81b3d2;
 }
 
-.advantage-city h2 {
+
+.description-city {
+    max-width: 280px;
+    min-height: 145px;
+    text-align: center;
+    padding: 20px 60px 30px 70px;
+}
+
+.description-city h2 {
     font-size: 21px;
     font-weight: bold;
-    margin-top: 46px;
-    margin-left: 50px;
-    margin-right: 50px;
 }
+
+.description-city p{
+    text-align: center;
+}
+
+.city-number {
+    padding: 20px;
+}
+
+
+
+/*------------------Особенности -------------------*/
     
 .features-item {
     list-style: none;
@@ -82,7 +228,77 @@ img {
     color: #333333;
 }
 
+
+
+.features {
+    margin-bottom: 85px;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.features-item {
+    width: 285px;
+    
+    text-align: center;
+}
+
+.features-item p {
+    margin: 20px 10px;
+}
+
+
+/* ---------------------Мост дьявола--------------*/
+
+
+.advantage-bridge {
+    display: flex;
+    max-height: 253px;
+    color: #ffffff;
+    background-color: #81b3d2;
+    
+}
+
+.description-bridge {
+    max-width: 300px;
+    max-height: 140px;
+}
+
+.description-bridge h2 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.bridge-number {
+    padding: 20px;
+}
+
+
+/* -----------------------Достопримечательности-------*/
+
+.attractions {
+    max-height: 256px;
+    margin-bottom: 50px;
+    background-color: #eeeeee;
+}
+
+.attractions-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
 .attraction-item {
+    max-width: 210px;
+    text-align: center;
+    vertical-align: ;
+    padding: 50px 70px 65px 70px;
+
     list-style: none; 
     font-size: 21px;
     font-weight: bold;
@@ -94,14 +310,34 @@ img {
     color: #333333;
 }
 
+.attractions .road {
+    max-width: 260px;
+}
+
+.square-number,
+.road-number,
+.tourists-number {
+    padding: 20px;
+}
+
+
+/*-------------------------Поиск отеля---------------------*/
+
+
 .search-hotel .interest {
     font-size: 30px;
     font-weight: bold;
     line-height: 36px;
+    text-align: center;
+    max-width: 434px;
+    min-height: 96px;
+    padding-left: 383px;
+    padding-right: 383px;
 }
 
 .interest p {
     font-size: 14px;
+    font-weight: normal;
     line-height: 24px;
     padding-bottom: 52px;
     color: #333333;
@@ -112,10 +348,8 @@ img {
     font-weight: bold;
     line-height: 26px;
     color: #ffffff;
-    padding-top: 35px;
-    padding-bottom: 33px;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding: 35px 140px 33px 140px;
+
 }
 
 .button-search {
@@ -130,6 +364,32 @@ img {
     color: rgba(255,255,255, 0.3);
     background-color: #503e33;
 }
+
+/*-------------ФОРМА ПОИСКА НА ГЛАВНОЙ СТРАНИЦЕ------------------*/
+
+
+.modal-search-form {
+    color: #000000;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: left;
+    max-width: 568px;
+    min-height: 395px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    margin-top: 30px;
+    margin-left: 316px;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filter-item {
+    width: 460px;
+}
+
 
 
 .date-check-in input,
@@ -172,15 +432,70 @@ img {
     font-size: 21px;
 }
 
-.hashtag-link {
+
+
+
+
+
+/* -------------------начало стилизации футера---------------*/
+.map {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-footer {
+    padding: 30px 0;
+    background: rgba(254, 254, 254, 0.9);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hashtag {
+    width: 136px;
+    margin: 0;
+    margin-left: 132px;
+    margin-top: 18px;
     font-size: 21px;
+    font-weight: bold;
     line-height: 26px;
     color: #000000;
 }
 
-.footer-social ul{
+
+.footer-social {  
+    width: 150px;
+    text-align: center;
+    margin-left: 256px;
+    vertical-align: middle;
+
+}
+
+.footer-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    padding: 0;
+    
     list-style: none;
 }
+
+.button-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+}
+
 
 .footer-social a {
     width: 46px;
@@ -199,9 +514,25 @@ img {
     background-color: #5496bd;
 }
 
-p.footer-copyright {
+.main-footer .footer-copyright {
+    display: inline-block;
     line-height: 26px;
     font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.footer-copyright a {
+    display: inline-block;
+    width: 113px;
+    height: 39px;
+    margin-left: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .footer-copyright svg {
@@ -219,6 +550,9 @@ p.footer-copyright {
 .footer-copyright svg:active {
     fill:#bdbbbc;
 }
+
+
+
 
  /* css inner.html */
  
@@ -347,289 +681,58 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* ----- Сеточные стили -----*/
-
-/*навигация*/
-.main-header {
-    max-width: 1200;
-    max-height: 56px;
-    margin: 0 auto;
-}
-
-.main-header-logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    
-}
-
-.site-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0 auto;
-}
-
-.site-navigation a {
-    display: block;
-}
-
-li {
-    width: 239px;
-    height: 56px;
-    padding: 12px;
-    margin: 0 auto;
-}
-
-li:nth-child(1),
-li:nth-child(2) {
-    text-align: left;
-}
-
-li:nth-child(3),
-li:nth-child(4) {
-    text-align: right;
-}
 
 
-.background-photo {
+
+/*inner*/
+
+/* лепим фон фильтра*/
+
+.filter-background {
     padding: 100px 0;
+    height: 562;
     text-align: center;
     width: 100%;
-    background: url("../img/background-photo.jpg") no-repeat;
+    background: url("../img/filter-background.jpg") no-repeat;
     background-size: cover;
-    
-  
+    background-position: center; 
 }
 
-.intro-welcome {
-    width: 459px;
-    height: 353px;
-    
-}
-
-.background-photo::before {
-    content: '';
-    height: 70px;
-    background: url("../svg-sedona/intro-mask.svg") center no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: 90px;
-    left: 0;
-    right: 0;
-  }
-
-.about-city {
-    padding: 0;
-    margin-top: -17px;
-}
-
-.about-city-top {
-    padding-top: 55px;    
-    padding-left: 360px;
-    padding-right: 360px;
-}
-
-.about-city-desc {
-    margin-top: 38px;
-    padding-bottom: 45px;
-}
-
-.advantage-city {
+.filter-list {
     display: flex;
 }
 
-.description-city {
-    text-align: center;
-    vertical-align: justify;
-    padding-left: 60px;
-    padding-right: 70px;
-    padding-bottom: 46px;
+.infrastructure {
+    display: inline-block;
 }
 
-.city-number {
-    padding: 20px;
-}
-
-.city-desc {
-    margin-left: -5px;
-}
-
-.photo-city {
-    width: 100%;
-}
-
-.advantage-bridge {
-    height: 256px;
-    color: #ffffff;
-    background-color: #81b3d2;
+.infrastructure-item {
     display: flex;
+    flex-direction: column;
 }
 
-.photo-bridge {
-    margin-right: 0;
-    padding-right:50px;
+
+.type-house {
+    display: inline-block;
+   
 }
 
-.description-bridge {
-    width: 303px;
-    height: 142px;
-    text-align: center;
-    vertical-align: justify;
-    margin-top: 50px;
-    padding-right: 49px;
-}
-
-.description-bridge h2 {
-    font-size: 21px;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.bridge-number {
-    padding: 20px;
-}
-
-.bridge-desc {
-    margin: 0 20px;
-}
-
-.features {
-    margin-bottom: 85px;
-}
-
-.features-list {
+.type-house-item {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-}
-
-.features-item {
-    width: 285px;
-    
-    text-align: center;
-}
-
-.features-item p {
-    margin: 20px 10px;
-}
-
-.attractions {
-    margin-bottom: 85px;
-}
-
-.attractions-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-}
-
-.attraction-item {
-    width: 285px;
-    
-    text-align: center;
-}
-
-.attractions-item p {
-    margin: 20px 10px;
-}
-
-.modal-search-form {
-    color: #000000;
-    font-weight: bold;
-    line-height: 26px;
-    text-align: left;
-    width: 568px;
-    height: 395px;
-    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-}
-
-.filter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.filter-item {
-    width: 460px;
-}
-
-.main-footer {
-    padding: 30px 0;
-    margin-top: 36px;
-}
-
-.main-footer .container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-link a {
-    width: 136px;
-    margin: 0;
-    margin-left: 132px;
-
-}
-
-.footer-social {  
-    width: 150px;
-    text-align: center;
-    margin-left: 256px;
-
-}
-
-.footer-social ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 150px;
-    margin: 0 auto;
-    padding: 0;
-    
-    list-style: none;
-}
-
-.button-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 48px;
-    background-color: #81b3d2;
-}
-
-.footer-copyright {
-    width: 197px;
-    margin: 0;
-    margin-left: auto;
-    text-align: center;
-}
-
-.footer-copyright b {
-    display: block;
-    margin-left: 11px;
-    position: relative;
-}
-
-.footer-copyright b::before {
-    content: "";
-    position: absolute;
-    right: 8px;
+    flex-direction: column;
 }
 
 
 
-/*inner filter*/
+
+
+
+
+/*начало оформления стоимости суток*/
 body {
   font-weight: 400;
   font-family: "PT Sans", Arial, sans-serif;
 
-  background: #2a3e45; /* для демо */
 }
 
 .filter-range {
@@ -764,3 +867,6 @@ body {
 
   background: #ffffff;
 }
+/*конец оформления стоимости суток*/
+
+
