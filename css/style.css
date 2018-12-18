@@ -11,12 +11,10 @@ body {
 }
 
 .container {
-    min-width: 768px;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    box-shadow: 0 -5px 9px 2px #dbdbdb;
 }
 
 a {
@@ -29,8 +27,7 @@ img {
 }
 
 .main-header {
-    position: relative;
-    max-width: 1200;
+    max-width: 1200px;
     max-height: 56px;
     margin: 0 auto;
 }
@@ -103,8 +100,8 @@ img {
 .main-pic {
     position: relative;
     height: 450px;
-    padding-top: 61px;
-    background: url("../img/background-photo.jpg") no-repeat;
+    padding: 60px;
+    background: url("../img/background-photo.jpg") 0px -80px no-repeat;
     background-size: cover;
 }
 
@@ -296,7 +293,6 @@ img {
 .attraction-item {
     max-width: 210px;
     text-align: center;
-    vertical-align: ;
     padding: 50px 70px 65px 70px;
 
     list-style: none; 
@@ -377,7 +373,8 @@ img {
     min-height: 395px;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
     margin-top: 30px;
-    margin-left: 316px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .filter {
@@ -453,7 +450,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    vertical-align: middle;
 }
 
 .hashtag {
@@ -471,9 +467,7 @@ img {
 .footer-social {  
     width: 150px;
     text-align: center;
-    margin-left: 256px;
-    vertical-align: middle;
-
+    margin-left: auto;
 }
 
 .footer-social ul {
@@ -518,9 +512,7 @@ img {
     display: inline-block;
     line-height: 26px;
     font-weight: normal;
-    vertical-align: middle;
     text-align: center;
-    margin: 0;
     margin-top: 10px;
     margin-left: auto;
 }
@@ -531,7 +523,6 @@ img {
     height: 39px;
     margin-left: 8px;
     font-size: 14px;
-    vertical-align: middle;
     text-align: center;
 }
 
@@ -554,143 +545,10 @@ img {
 
 
 
- /* css inner.html */
- 
- /* это временный бэкграунд для фильтра*/
-.filters fieldset {
-    background-color: #666666;
-}
+ /* ---------------------- inner.html ------------------------- */
 
- .infrastructure,
- .type-house,
- .count {
-    font-weight: normal;
-    color: #ffffff;
-    text-align: left;
-    }
-
-.filters legend {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.infrastructure-item {
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.show {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 21px;
-    color: #ffffff;
-    text-align: left;
-    text-transform: uppercase;
-    width: 133px;
-    height: 32px;
-    border: 2px solid #ffffff;
-    background: transparent;
-}
-/* тут нужно вставить чекбоксы on и off, но как пока не знаю*/
-
-
-.catalog-item a:hover,
-.catalog-item a:focus {
-    color: #81b3d2;
-}
-
-.catalog-item a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.catalog-list {
-    text-transform: uppercase;
-    text-align: left;
-    list-style: none;
-}
-.catalog-list a {
-    font-size: 21px;
-    color: #000000;
-    font-weight: bold;
-    line-height: 26px;
-}
-.catalog-list p {
-    color: #333333;
-}
-
-.hotel-raiting {
-    color: #666666;
-}
-.catalog .detailed {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: left;
-    width: 110px;
-    height: 27px;
-    background-color: #81b3d2;
-}
-.catalog .booking {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: left;
-    width: 142px;
-    height: 27px;
-    background-color:#766357;
-}
-
-a.detailed:hover,
-a.detailed:focus {
-    background-color: #669ec0;
-}
-
-.catalog .detailed:active {
-    color: rgba(255,255,255, 0.3);
-    background-color: #5496bd;
-}
-
-a.booking:hover,
-a.booking:focus {
-    background-color: #604e43;
-}
-
-a.booking:active {
-    color: rgba(255,255,255, 0.3);
-    background-color: #503e33;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-
-
-
-/*inner*/
-
-/* лепим фон фильтра*/
-
-.filter-background {
-    padding: 100px 0;
-    height: 562;
+.filters {
+    max-height: 250px;
     text-align: center;
     width: 100%;
     background: url("../img/filter-background.jpg") no-repeat;
@@ -698,49 +556,52 @@ input[type="radio"].visually-hidden {
     background-position: center; 
 }
 
-.filter-list {
-    display: flex;
-}
 
-.infrastructure {
-    display: inline-block;
+ .filter-column {
+    display: flex;
+    justify-content: space-around;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: left;
+    padding: 30px;
+    }
+
+.filter-infrastructure {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
 }
 
 .infrastructure-item {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    text-align: left;
+}
+
+.filter-house {
     display: flex;
     flex-direction: column;
+    width: 140px;
 }
 
-
-.type-house {
-    display: inline-block;
-   
+.house-item {
+    text-align: left;
+    padding: 10px;
 }
 
-.type-house-item {
-    display: flex;
-    flex-direction: column;
+.filters legend {
+    font-size: 16px;
+    font-weight: bold;
 }
 
+/*---------------------- стоимостm суток----------------------*/
 
-
-
-
-
-
-/*начало оформления стоимости суток*/
-body {
-  font-weight: 400;
-  font-family: "PT Sans", Arial, sans-serif;
-
-}
 
 .filter-range {
-  width: 330px;
-  margin: 50px auto; /* для демо */
-
-  color: #ffffff;
-  text-transform: uppercase;
+    width: 330px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .filter-range-title {
@@ -867,6 +728,135 @@ body {
 
   background: #ffffff;
 }
-/*конец оформления стоимости суток*/
+
+
+ /*---------------------------каталог отелей -------------------*/
+.search-results {
+    display: flex;
+    padding: 30px 10px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.results-left {
+    text-align: left;
+    padding: 10px 70px;
+
+}
+
+.results-center {
+    display: flex;
+    width: 370px;
+    justify-content: space-around;
+
+    list-style: none;
+}
+
+.icon-up-dir {
+    
+}
+
+.icon-down-dir {
+
+}
+
+
+.catalog-item {
+    display: flex;
+    margin-right: 70px;
+    padding: 30px 10px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+    color: #81b3d2;
+}
+
+.catalog-item a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-list {
+    text-transform: uppercase;
+    text-align: left;
+    list-style: none;
+}
+.catalog-list a {
+    font-size: 21px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 26px;
+}
+.catalog-list p {
+    color: #333333;
+}
+
+.hotel-raiting {
+    color: #666666;
+}
+.catalog .detailed {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    width: 110px;
+    height: 27px;
+    background-color: #81b3d2;
+}
+.catalog .booking {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    width: 142px;
+    height: 27px;
+    background-color:#766357;
+}
+
+a.detailed:hover,
+a.detailed:focus {
+    background-color: #669ec0;
+}
+
+.catalog .detailed:active {
+    color: rgba(255,255,255, 0.3);
+    background-color: #5496bd;
+}
+
+a.booking:hover,
+a.booking:focus {
+    background-color: #604e43;
+}
+
+a.booking:active {
+    color: rgba(255,255,255, 0.3);
+    background-color: #503e33;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+
+
 
 
