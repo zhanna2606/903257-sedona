@@ -11,11 +11,13 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 1200px;
     margin-right: auto;
     margin-left: auto;
     background-color: white;
+    box-shadow: 0px 5px 15px 0;   /*временно отключила*/
 }
+
 
 a {
     text-decoration: none;
@@ -27,7 +29,6 @@ img {
 }
 
 .main-header {
-    max-width: 1200px;
     max-height: 56px;
     margin: 0 auto;
 }
@@ -37,6 +38,7 @@ img {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 .main-navigation {
@@ -97,6 +99,12 @@ img {
     text-align: right;
 }
 
+.main-container {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
 .main-pic {
     position: relative;
     height: 450px;
@@ -125,91 +133,59 @@ img {
 }
 
 
-/* переделка в html по-другому
-.background-photo {
-    padding: 100px 0;
-    text-align: center;
-    width: 100%;
-    background: url("../img/background-photo.jpg") no-repeat;
-    background-size: cover;
-    background-position: 0px -80px;
-}
-
-.intro-welcome {
-    display: block;
-    width: 459px;
-    height: 353px;
-    margin: 0 auto;
-    
-}
-
-.background-photo::after {
-    content: "";
-    position: absolute;
-    bottom: 88px;
-    left: 0;
-    display: block;
-    height: 70px;
-    background: url("../svg-sedona/intro-mask.svg") no-repeat;
-    background-size: cover;
-  }
-*/
-
 /* ---------------Преимущества---------------*/
 .about-city {
+    margin: 0;
     padding: 0;
-    margin-top: -17px;
     line-height: 26px;
     color: #000000;
 }
-.about-city .about-city-top {
+.about-city-top {
     font-size: 21px;
     font-weight: bold;
-}
-
-.about-city .about-city-desc {
-    color: #333333;
-}
-
-.about-city-top {
-    padding-top: 55px;    
-    padding-left: 360px;
-    padding-right: 360px;
+    padding: 60px 300px 0 300px;
 }
 
 .about-city-desc {
-    margin-top: 38px;
-    padding-bottom: 45px;
+    color: #333333;
+    padding: 40px 300px;
 }
+
 
 .advantage-city {
     display: flex;
-    max-height: 254px;
     color: #ffffff;
     background-color: #81b3d2;
 }
 
 
 .description-city {
-    max-width: 280px;
-    min-height: 145px;
+    width: 350px;
     text-align: center;
-    padding: 20px 60px 30px 70px;
+    padding: 40px 60px 0 60px;
 }
 
 .description-city h2 {
     font-size: 21px;
     font-weight: bold;
-}
-
-.description-city p{
-    text-align: center;
+    letter-spacing: normal;
+    padding: 0 50px;
+    margin: 0;
 }
 
 .city-number {
     padding: 20px;
 }
 
+.description {
+    margin: 0;
+    padding: 0;
+}
+
+.photo-city {
+    width: 800px;
+    height: 256px;
+}
 
 
 /*------------------Особенности -------------------*/
@@ -228,24 +204,40 @@ img {
 
 
 .features {
-    margin-bottom: 85px;
+   
 }
 
 .features-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
 }
 
 .features-item {
-    width: 285px;
-    
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding: 160px 40px;
 }
 
-.features-item p {
-    margin: 20px 10px;
+.icon-house {
+    background-image: url("../svg-sedona/icon-house.svg");
+    background-position: 162px 60px;
+    background-repeat: no-repeat;
+}
+
+.icon-eat {
+    background-image: url("../svg-sedona/icon-eat.svg");
+    background-position: 162px 60px;
+    background-repeat: no-repeat;
+}
+
+.icon-present {
+    background-image: url("../svg-sedona/icon-present.svg");
+    background-position: 162px 60px;
+    background-repeat: no-repeat;
 }
 
 
@@ -254,32 +246,37 @@ img {
 
 .advantage-bridge {
     display: flex;
-    max-height: 253px;
+    flex-direction: row-reverse;
     color: #ffffff;
     background-color: #81b3d2;
     
 }
 
 .description-bridge {
-    max-width: 300px;
-    max-height: 140px;
+    width: 300px;        /*---------почему ширина блока не срабатывает тут? */
+    padding: 0;
+    margin: 0;
 }
 
 .description-bridge h2 {
     font-size: 21px;
     font-weight: bold;
+    margin: 0;
 }
 
 .bridge-number {
     padding: 20px;
 }
 
+.photo-bridge {
+    width: 800px;
+    height: 244px;
+}
+
 
 /* -----------------------Достопримечательности-------*/
 
 .attractions {
-    max-height: 256px;
-    margin-bottom: 50px;
     background-color: #eeeeee;
 }
 
@@ -291,67 +288,68 @@ img {
 }
 
 .attraction-item {
-    max-width: 210px;
-    text-align: center;
-    padding: 50px 70px 65px 70px;
-
+    width: 400px;
+    text-align: center;    
+    padding: 55px 60px;
     list-style: none; 
     font-size: 21px;
     font-weight: bold;
 }
 
+
 .attraction-item p{
     font-size: 14px;
     font-weight: normal;
     color: #333333;
+
 }
 
-.attractions .road {
-    max-width: 260px;
-}
-
-.square-number,
-.road-number,
-.tourists-number {
+.number {
     padding: 20px;
 }
 
 
 /*-------------------------Поиск отеля---------------------*/
 
+.search-hotel {
+    display: flex;
+    flex-direction: column;
+}
 
-.search-hotel .interest {
+.interest {
     font-size: 30px;
     font-weight: bold;
     line-height: 36px;
     text-align: center;
-    max-width: 434px;
-    min-height: 96px;
-    padding-left: 383px;
-    padding-right: 383px;
+    padding: 50px 0 0 0;
+   
 }
 
 .interest p {
     font-size: 14px;
     font-weight: normal;
     line-height: 24px;
-    padding-bottom: 52px;
     color: #333333;
-}
-
-.search-hotel a {
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
-    color: #ffffff;
-    padding: 35px 140px 33px 140px;
-
+    padding: 20px 300px;
 }
 
 .button-search {
     width: 568px;
+    height: 86px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #ffffff; 
     background-color: #766357;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.button-search p {
+    padding-top: 10px;
+}
+
+
 .button-search:hover,
 .button-search:focus {
     background-color: #604e43; 
@@ -361,123 +359,66 @@ img {
     background-color: #503e33;
 }
 
-/*-------------ФОРМА ПОИСКА НА ГЛАВНОЙ СТРАНИЦЕ------------------*/
 
 
-.modal-search-form {
-    color: #000000;
-    font-weight: bold;
-    line-height: 26px;
-    text-align: left;
-    max-width: 568px;
-    min-height: 395px;
-    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* ------------------------КАРТА----------------------------*/
 
-.filter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.filter-item {
-    width: 460px;
-}
-
-
-
-.date-check-in input,
-.date-check-out input {
-    width: 346px;
-    height: 38px;
-    background-color: #f2f2f2;
-}
-
-.date-check-in input:hover,
-.date-check-out input:hover {
-    background-color: #ebebeb;
-}
-.date-check-in input:focus,
-.date-check-out input:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
-}
-
-/* тут будет что-то с плюсами и минусами сменяющими цвета при наведении*/
-
-.search {
-    font-size: 21px;
-    font-weight: bold;
-    color: #ffffff;
-    width: 458px;
-    height: 58px;
-    text-transform: uppercase;
-    background-color: #81b3d2;
-}
-
-.search:hover,
-.search:focus {
-    background-color: #669ec0;
-}
-
-.search:active {
-    background-color: #5496bd;
-    color: rgba(255,255,255,0.3);
-    font-size: 21px;
-}
-
-
-
-
-
-
-/* -------------------начало стилизации футера---------------*/
 .map {
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
+    width: 1200px;
+    height: 593px;;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+
 }
+
+.map  .main-footer {
+    position: absolute;
+    width: 100%;
+    background: #FFF;
+    opacity: 0.9;
+    bottom: 0;
+
+}
+
+
+/* -------------------ФУТЕР ВТОРОЙ СТРАНИЦЫ---------------*/
 
 .main-footer {
-    padding: 30px 0;
-    background: rgba(254, 254, 254, 0.9);
+    padding: 0;
+    margin: 0;
+    opacity: 0.9;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: space-around;
 }
 
 .hashtag {
     width: 136px;
-    margin: 0;
-    margin-left: 132px;
-    margin-top: 18px;
+    height: 16px;
     font-size: 21px;
     font-weight: bold;
-    line-height: 26px;
+    font-style: normal;
+    line-height: 1.24;
+    text-align: center;
     color: #000000;
+    padding-top: 60px;
 }
 
 
 .footer-social {  
     width: 150px;
     text-align: center;
-    margin-left: auto;
+    padding-top: 35px;
 }
 
 .footer-social ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 150px;
-    margin: 0 auto;
-    padding: 0;
-    
+
     list-style: none;
 }
 
@@ -508,22 +449,17 @@ img {
     background-color: #5496bd;
 }
 
-.main-footer .footer-copyright {
-    display: inline-block;
+.footer-copyright {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
     line-height: 26px;
     font-weight: normal;
     text-align: center;
-    margin-top: 10px;
-    margin-left: auto;
+    padding-top: 45px;
 }
 
-.footer-copyright a {
-    display: inline-block;
-    width: 113px;
-    height: 39px;
-    margin-left: 8px;
-    font-size: 14px;
-    text-align: center;
+.footer-copyright p {
 }
 
 .footer-copyright svg {
@@ -531,6 +467,7 @@ img {
     height: 41px;
     fill: #231f20;
     background: #FFF;
+    padding: 8px;
 }
 
 .footer-copyright svg:hover, 
@@ -542,10 +479,174 @@ img {
     fill:#bdbbbc;
 }
 
+/*-------------МОДАЛЬНАЯ ФОРМА ПОИСКА НА ГЛАВНОЙ СТРАНИЦЕ--------*/
+
+
+
+.modal-search-form {
+    position: absolute;
+    left: 30%; /* тут не пойму как выровнять под кнопку поиска */
+    z-index: 1;
+    color: #000000;
+    background-color: #FFF;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: left;
+    width: 568px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px 45px;
+}
+
+.filter-item {
+    display: flex;
+
+}
+
+.date-check-in,
+.date-check-out {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.date-check-in {
+    width: 112px;
+   
+}
+.date-check-out {
+    width: 112px;
+    
+}
+
+.filter-item input {
+    width: 346px;
+    height: 38px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    border: none;
+    padding: 12px 14px;
+}
+
+.filter-item input:hover {
+    background-color: #ebebeb;
+}
+
+.filter-item input:focus {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+}
+
+.calendar {
+    background-image: url("../svg-sedona/calendar.svg");
+    background-position: 310px center;
+    background-repeat: no-repeat;
+    background-color: #cacaca;
+}
+
+.calendar:hover,
+.calendar:focus {
+    background-color: #000000;
+}
+
+.calendar:active {
+    background-color: #81b3d2;
+}
+
+
+.visitors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adult {
+    padding-right: 25px;
+}
+
+.children {
+    padding-left: 52px;
+    padding-right: 25px;
+}
+
+.box {
+    display: flex;   
+}
+
+.plus,
+.minus {
+    font-size: 16px;
+    color:grey;
+    width: 38px;
+    height: 38px;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sum {
+    width: 38px;
+    height: 38px;
+    background-color: #f2f2f2;
+    border: none;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.plus:hover,
+.minus:hover,
+.plus:focus,
+.minus:focus  {
+    color: #000000;
+}
+
+.plus:active,
+.minus:active  {
+    color: #81b3d2;
+}
+
+.search {
+    width: 458px;
+    height: 58px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #81b3d2;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+}
+
+.search:hover,
+.search:focus {
+    background-color: #669ec0;
+}
+
+.search:active {
+    font-size: 21px;
+    color: rgba(255,255,255,0.3);
+    background-color: #5496bd;
+    
+    
+}
+
+
+
+
+
 
 
 
  /* ---------------------- inner.html ------------------------- */
+
+                        /*Фильтр поиска*/
 
 .filters {
     max-height: 250px;
@@ -556,7 +657,6 @@ img {
     background-position: center; 
 }
 
-
  .filter-column {
     display: flex;
     justify-content: space-around;
@@ -565,6 +665,10 @@ img {
     text-align: left;
     padding: 30px;
     }
+
+ .filter-column h2 {
+    font-size: 16px;
+ }   
 
 .filter-infrastructure {
     display: flex;
@@ -575,9 +679,29 @@ img {
 .infrastructure-item {
     font-size: 14px;
     font-weight: normal;
-    padding: 10px;
+    padding: 0;
     text-align: left;
 }
+
+                /* отображение нестандартных чекбоксов
+.infrastructure-item label {
+    width: 32px; 
+    height: 26px; 
+    display: block; 
+    position: relative; 
+}
+
+.infrastructure-item input[type="checkbox"] + span {
+    position: absolute; 
+   
+    width: 100%; height: 100%;
+    background: url("../svg-sedona/checkbox-on.svg") no-repeat; 
+    cursor: pointer; 
+    background-position: 0px 0;
+}
+*/
+
+
 
 .filter-house {
     display: flex;
@@ -587,7 +711,6 @@ img {
 
 .house-item {
     text-align: left;
-    padding: 10px;
 }
 
 .filters legend {
@@ -733,37 +856,85 @@ img {
  /*---------------------------каталог отелей -------------------*/
 .search-results {
     display: flex;
-    padding: 30px 10px;
+    flex-direction: column;
     border-bottom: 2px solid #e5e5e5;
 }
 
-.results-left {
-    text-align: left;
-    padding: 10px 70px;
-
+.title-line {
+    display: flex;
+    border-bottom: 2px solid #e5e5e5;
 }
 
-.results-center {
+.title-line p {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 30px 70px;
+}
+
+.results-sort {
     display: flex;
     width: 370px;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    padding: 40px;
+    text-decoration: none;
     list-style: none;
 }
 
+.result-sort a:active {
+    color: #81b3d2;
+}
+
+
+
+/*   отложила пока стрелки сортировки, не получается
 .icon-up-dir {
-    
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    background-image: url("../svg-sedona/icon-up-dir.svg");
+    background-repeat: no-repeat;
+    background-position: 906px 40px;
+   
 }
 
 .icon-down-dir {
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    background-image: url("../svg-sedona/icon-down-dir.svg");
+    background-repeat: no-repeat;
+     background-position: 930px 40px;
+  
+}
+*/
+.catalog-list {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    list-style: none;    
+}
 
+.catalog-list a {
+    font-size: 21px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.catalog-list p {
+    color: #333333;
+}
+
+
+.catalog-item-image {
+    padding: 30px 30px 30px 70px;
 }
 
 
 .catalog-item {
     display: flex;
-    margin-right: 70px;
-    padding: 30px 10px;
     border-bottom: 2px solid #e5e5e5;
 }
 
@@ -777,25 +948,20 @@ img {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog-list {
-    text-transform: uppercase;
-    text-align: left;
-    list-style: none;
-}
-.catalog-list a {
-    font-size: 21px;
-    color: #000000;
-    font-weight: bold;
-    line-height: 26px;
-}
-.catalog-list p {
-    color: #333333;
+.hotel-description {
+    width: 255px;
+    padding: 35px 250px 30px 0;
 }
 
-.hotel-raiting {
-    color: #666666;
+.raiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 110px;
+    padding: 35px 70px 25px 250px;
 }
-.catalog .detailed {
+
+.hotel-description .detailed {
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
@@ -805,7 +971,7 @@ img {
     height: 27px;
     background-color: #81b3d2;
 }
-.catalog .booking {
+.hotel-description .booking {
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
@@ -821,7 +987,7 @@ a.detailed:focus {
     background-color: #669ec0;
 }
 
-.catalog .detailed:active {
+.hotel-description .detailed:active {
     color: rgba(255,255,255, 0.3);
     background-color: #5496bd;
 }
@@ -834,6 +1000,14 @@ a.booking:focus {
 a.booking:active {
     color: rgba(255,255,255, 0.3);
     background-color: #503e33;
+}
+
+.hotel-raiting {
+    width: 110px;
+    background-color: #f2f2f2;
+    color: #666666;
+    text-align: center;
+    padding: 5px 10px;
 }
 
 .visually-hidden:not(:focus):not(:active),
