@@ -24,7 +24,7 @@
         </a>
       </nav>
     </header>
-    <main class="container">
+    <main class="main-container">
       <section class="filters">
         <h2 class="visually-hidden" aria-label="фильтр поиска отеля">Фильтр поиска отеля</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
@@ -32,28 +32,34 @@
           <div class="filter-column">
             <div class="filter-infrastructure">
               <h2>Инфрастурктура</h2>
-              <label class="infrastructure-item">
-                Бассейн<input type="checkbox" checked name="pool"><span></span>
-              </label>
-              <label class="infrastructure-item">
-                Парковка<input type="checkbox" name="parking">
-              </label>
-              <label class="infrastructure-item">
-                Wi-Fi<input type="checkbox" name="wifi">
-              </label>
+              <div class="infrastructure-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" checked name="pool">
+                <label>Бассейн</label>
+              </div>
+              <div class="infrastructure-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" name="parking">
+                <label>Парковка</label>
+              </div>
+              <div class="infrastructure-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" name="wifi">
+                <label>Wi-Fi</label>
+              </div>
             </div>
 
             <div class="filter-house">
               <h2>Тип жилья</h2>
-              <label class="house-item">
-                Гостиница<input type="checkbox" checked name="hotel">
-              </label>
-              <label class="house-item">
-                Мотель<input type="checkbox" checked name="motel">
-              </label>
-              <label class="house-item">
-                Апартаменты<input type="checkbox" checked name="apart">
-              </label>
+              <div class="house-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" checked name="hotel">
+                <label>Гостиница</label>
+              </div>
+              <div class="house-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" checked name="motel">
+                <label>Мотель</label>
+              </div>
+              <div class="house-item">
+                <input class="visually-hidden filter-input filter-checkbox" type="checkbox" checked name="apart">
+                <label>Апартаменты</label>
+              </div>
             </div>
 
             <!--Фильтр сделан по демке-->
@@ -99,72 +105,78 @@
             <li class="catalog-item">
               <p class="catalog-item-image">
                 <a href="catalog-item.html">
-                  <img src="img/hotel-amara.jpg" class="hotel-amara" width="135" height="90" alt="Гостиница AMARA RESORT & SPA">
+                  <img src="img/hotel-amara.jpg" class="hotel-amara" alt="Гостиница AMARA RESORT & SPA">
                 </a>
               </p>
               <div class="hotel-description">
                 <a href="catalog-item.html">
                   <span class="catalog-item-title">AMARA RESORT & SPA</span>
                 </a>
-                <p>
-                  <span class="catalog-category">Гостиница</span>
-                  <span class="catalog-item-price">от 4000 р.</span>
-                </p>
-                <p>
-                  <a class="button detailed" href="catalog-item.html">Подробнее</a>
-                  <a class="button booking" href="#">Забронировать</a>
-                </p>
+                <div class="detailes">
+                  <p class="about-hotel">
+                    <span class="hotel-category">Гостиница</span>
+                    <a class="button detailed" href="catalog-item.html">Подробнее</a>
+                  </p>
+                  <p class="about-price">
+                    <span class="catalog-item-price">от 4000 р.</span>
+                    <a class="button booking" href="#">Забронировать</a>
+                  </p>
+                </div>
               </div>
               <div class="raiting">
-                <img src="svg-sedona/star.svg" class="star" width="18" height="17" alt="Отель пять звезд">
+                <span></span>
                 <p class="hotel-raiting">Рейтинг: 8,5</p>
                 <div>
             </li>
             <li class="catalog-item">
               <p class="catalog-item-image">
                 <a href="catalog-item.html">
-                  <img src="img/hotel-desert.jpg" class="hotel-desert" width="135" height="90" alt="Мотель Desert Quail Inn">
+                  <img src="img/hotel-desert.jpg" class="hotel-desert" alt="Мотель Desert Quail Inn">
                 </a>
               </p>
               <div class="hotel-description">
                 <a href="catalog-item.html">
                   <span class="catalog-item-title">DESERT QUAIL INN</span>
                 </a>
-                <p>
-                  <span class="catalog-category">Мотель</span>
-                  <span class="catalog-item-price">от 3000 р.</span>
-                </p>
-                <p>
-                  <a class="button detailed" href="catalog-item.html">Подробнее</a>
-                  <a class="button booking" href="#">Забронировать</a>
-                </p>
+                <div class="detailes">
+                  <p class="about-hotel">
+                    <span class="hotel-category">Мотель</span>
+                    <a class="button detailed" href="catalog-item.html">Подробнее</a>
+                  </p>
+                  <p class="about-price">
+                    <span class="catalog-item-price">от 3000 р.</span>
+                    <a class="button booking" href="#">Забронировать</a>
+                  </p>
+                </div>
               </div>
               <div class="raiting">
-                <img src="svg-sedona/star.svg" class="star" width="18" height="17" alt="Отель три звезды">
+                <div class="star-3"></div>
                 <p class="hotel-raiting">Рейтинг: 8,9</p>
               </div>
             </li>
             <li class="catalog-item">
               <p class="catalog-item-image">
                 <a href="catalog-item.html">
-                  <img src="img/hotel-villasdiablo.jpg" class="hotel-villasdiablo" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+                  <img src="img/hotel-villasdiablo.jpg" class="hotel-villasdiablo" alt="Апартаменты Villas at Poco Diablo">
                 </a>
               </p>
               <div class="hotel-description">
                 <a href="catalog-item.html">
                   <span class="catalog-item-title">Villas at Poco Diablo</span>
                 </a>
-                <p>
-                  <span class="catalog-category">Апартаменты</span>
-                  <span class="catalog-item-price">от 2000 р.</span>
-                </p>
-                <p>
-                  <a class="button detailed" href="catalog-item.html">Подробнее</a>
-                  <a class="button booking" href="#">Забронировать</a>
-                </p>
+                <div class="detailes">
+                  <p class="about-hotel">
+                    <span class="hotel-category">Апартаменты</span>
+                    <a class="button detailed" href="catalog-item.html">Подробнее</a>
+                  </p>
+                  <p class="about-price">
+                    <span class="catalog-item-price">от 2000 р.</span>
+                    <a class="button booking" href="#">Забронировать</a>
+                  </p>
+                </div>
               </div>
               <div class="raiting">
-                <img src="svg-sedona/star.svg" class="star" width="18" height="17" alt="Отель две звезды">
+                <div class="star-2"></div>
                 <p class="hotel-raiting">Рейтинг: 9,2</p>
               </div>
             </li>
@@ -201,7 +213,8 @@
             </li>
           </ul>
         </div>
-        <p class="footer-copyright">Website by
+        <div class="footer-copyright">
+          <p>Website by</p>
           <a class="button copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн-курс HTML Academy">
             <svg id="logo-html" data-name="logo-html" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
               <title>HTML Academy</title>
@@ -209,7 +222,7 @@
                 transform="translate(0 -0.02)" />
             </svg>
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   </div>

@@ -15,7 +15,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    box-shadow: 0px 5px 15px 0;   /*временно отключила*/
+    box-shadow: 0px 5px 15px 0; 
 }
 
 
@@ -29,7 +29,6 @@ img {
 }
 
 .main-header {
-    max-height: 56px;
     margin: 0 auto;
 }
 
@@ -49,13 +48,29 @@ img {
 
 .site-navigation {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 
     list-style: none;
 }
+
+.site-navigation li {
+    width: 300px;
+    padding: 15px 70px;
+}
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2) {
+    text-align: left;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+    text-align: right;
+}
+
+
+
 .site-navigation a{
     display: block;
 
@@ -77,37 +92,13 @@ img {
     color: #766357;
 }
 
-.site-navigation ul {
-    margin: 0;
-    padding: 0;
-}
-
-.site-navigation li {
-    display: inline-block;
-    min-height: 56px;
-    padding-top: 17px;
-    margin: 0 auto;
-}
-
-.site-navigation li:nth-child(1),
-.site-navigation li:nth-child(2) {
-    text-align: left;
-}
-
-.site-navigation li:nth-child(3),
-.site-navigation li:nth-child(4) {
-    text-align: right;
-}
-
 .main-container {
     padding: 0;
     margin: 0;
-    box-shadow: none;
 }
 
 .main-pic {
     position: relative;
-    height: 450px;
     padding: 60px;
     background: url("../img/background-photo.jpg") 0px -80px no-repeat;
     background-size: cover;
@@ -160,20 +151,20 @@ img {
 
 
 .description-city {
-    width: 350px;
+    width: 400px;
     text-align: center;
-    padding: 40px 60px 0 60px;
+    padding: 46px 60px 58px 60px;
 }
 
 .description-city h2 {
     font-size: 21px;
     font-weight: bold;
-    letter-spacing: normal;
-    padding: 0 50px;
+    padding: 0;
     margin: 0;
 }
 
 .city-number {
+    margin: 0;
     padding: 20px;
 }
 
@@ -201,12 +192,6 @@ img {
     color: #333333;
 }
 
-
-
-.features {
-   
-}
-
 .features-list {
     display: flex;
     justify-content: space-around;
@@ -219,7 +204,7 @@ img {
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    padding: 160px 40px;
+    padding: 160px 40px 40px 40px;
 }
 
 .icon-house {
@@ -246,25 +231,25 @@ img {
 
 .advantage-bridge {
     display: flex;
-    flex-direction: row-reverse;
     color: #ffffff;
-    background-color: #81b3d2;
-    
+    background-color: #81b3d2;    
 }
 
 .description-bridge {
-    width: 300px;        /*---------почему ширина блока не срабатывает тут? */
-    padding: 0;
-    margin: 0;
+    width: 400px;
+    text-align: center;
+    padding: 40px 30px 50px 25px;
 }
 
 .description-bridge h2 {
     font-size: 21px;
     font-weight: bold;
     margin: 0;
+    padding: 0;
 }
 
 .bridge-number {
+    margin: 0;
     padding: 20px;
 }
 
@@ -321,7 +306,7 @@ img {
     font-weight: bold;
     line-height: 36px;
     text-align: center;
-    padding: 50px 0 0 0;
+    padding: 50px 0 10px 0;
    
 }
 
@@ -334,6 +319,7 @@ img {
 }
 
 .button-search {
+    position: relative;
     width: 568px;
     height: 86px;
     font-size: 21px;
@@ -341,12 +327,12 @@ img {
     line-height: 26px;
     color: #ffffff; 
     background-color: #766357;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .button-search p {
-    padding-top: 10px;
+    margin: 0;
+    padding: 30px 80px;
 }
 
 
@@ -382,7 +368,7 @@ img {
 }
 
 
-/* -------------------ФУТЕР ВТОРОЙ СТРАНИЦЫ---------------*/
+/* -------------------ФУТЕР СТРАНИЦ---------------*/
 
 .main-footer {
     padding: 0;
@@ -392,7 +378,8 @@ img {
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 35px 100px;
 }
 
 .hashtag {
@@ -404,20 +391,20 @@ img {
     line-height: 1.24;
     text-align: center;
     color: #000000;
-    padding-top: 60px;
 }
 
 
 .footer-social {  
     width: 150px;
     text-align: center;
-    padding-top: 35px;
 }
 
 .footer-social ul {
     display: flex;
     justify-content: space-between;
     width: 150px;
+    margin: 0;
+    padding: 0;
 
     list-style: none;
 }
@@ -456,7 +443,6 @@ img {
     line-height: 26px;
     font-weight: normal;
     text-align: center;
-    padding-top: 45px;
 }
 
 .footer-copyright p {
@@ -485,7 +471,12 @@ img {
 
 .modal-search-form {
     position: absolute;
-    left: 30%; /* тут не пойму как выровнять под кнопку поиска */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    /*left: 331px;  тут не пойму как  правильно выровнять под кнопку поиска 
+    right: 331px;*/
     z-index: 1;
     color: #000000;
     background-color: #FFF;
@@ -506,7 +497,8 @@ img {
 
 .filter-item {
     display: flex;
-
+    margin: 0;
+    padding: 15px 0 15px 0;
 }
 
 .date-check-in,
@@ -562,6 +554,11 @@ img {
 .visitors {
     display: flex;
     justify-content: space-between;
+    padding: 15px 0 50px 0;
+}
+
+.visitor-item {
+    display: flex;
 }
 
 .adult {
@@ -621,7 +618,7 @@ img {
     background-color: #81b3d2;
     box-sizing: border-box;
     border: none;
-    padding: 0;
+    padding: 15px 0 15px 0;
 }
 
 .search:hover,
@@ -649,9 +646,7 @@ img {
                         /*Фильтр поиска*/
 
 .filters {
-    max-height: 250px;
     text-align: center;
-    width: 100%;
     background: url("../img/filter-background.jpg") no-repeat;
     background-size: cover;
     background-position: center; 
@@ -659,11 +654,12 @@ img {
 
  .filter-column {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-weight: normal;
     color: #ffffff;
     text-align: left;
-    padding: 30px;
+    margin: 0;
+    padding: 30px 70px;
     }
 
  .filter-column h2 {
@@ -673,44 +669,65 @@ img {
 .filter-infrastructure {
     display: flex;
     flex-direction: column;
-    width: 140px;
-}
-
-.infrastructure-item {
-    font-size: 14px;
-    font-weight: normal;
-    padding: 0;
+    width: 250px;
     text-align: left;
 }
 
-                /* отображение нестандартных чекбоксов
-.infrastructure-item label {
-    width: 32px; 
-    height: 26px; 
-    display: block; 
-    position: relative; 
+.filter-infrastructure h2,
+.filter-house h2 {
+    margin: 0;
+    padding-bottom: 20px;
 }
 
-.infrastructure-item input[type="checkbox"] + span {
-    position: absolute; 
+.infrastructure-item,
+.house-item {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 15px 0 15px 45px;
+    text-align: left;
    
-    width: 100%; height: 100%;
-    background: url("../svg-sedona/checkbox-on.svg") no-repeat; 
-    cursor: pointer; 
-    background-position: 0px 0;
 }
-*/
 
+.infrastructure-item label,
+.house-item label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  color: #ffffff;
+}
+
+.filter-input:disabled {
+    color: #6a6a6a;
+}
+
+.filter-checkbox + label::before {
+    content: url("../svg-sedona/checkbox-off.svg");
+    position: absolute;
+    left: -45px;
+    top: 0;
+}
+
+.filter-checkbox:checked + label::after {
+    content: url("../svg-sedona/checkbox-on.svg");
+
+    position: absolute;
+    left: -45px;
+    top: 0;
+}
 
 
 .filter-house {
     display: flex;
     flex-direction: column;
-    width: 140px;
-}
-
-.house-item {
-    text-align: left;
+    width: 250px;
+    padding-right: 115px;
 }
 
 .filters legend {
@@ -718,7 +735,11 @@ img {
     font-weight: bold;
 }
 
-/*---------------------- стоимостm суток----------------------*/
+
+                
+
+
+/*---------------------- стоимостmь суток----------------------*/
 
 
 .filter-range {
@@ -857,12 +878,11 @@ img {
 .search-results {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #e5e5e5;
 }
 
 .title-line {
     display: flex;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .title-line p {
@@ -929,13 +949,16 @@ img {
 
 
 .catalog-item-image {
+    margin: 0;
+    width: 135px;
+    height: 90px;
     padding: 30px 30px 30px 70px;
 }
 
 
 .catalog-item {
     display: flex;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
@@ -949,16 +972,48 @@ img {
 }
 
 .hotel-description {
-    width: 255px;
-    padding: 35px 250px 30px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 250px 30px 0;
+}
+
+.detailes {
+    display: flex;
+    margin: 0;
+}
+
+.about-hotel {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-right: 6px;
+}
+
+.hotel-category {
+    padding: 5px 5px 5px 0;
+}
+
+.about-price {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.catalog-item-price {
+    padding: 5px 5px 5px 0;
 }
 
 .raiting {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 110px;
     padding: 35px 70px 25px 250px;
+}
+
+
+.catalog-item-price {
+    width: 150px;
+    padding: 5px left;
 }
 
 .hotel-description .detailed {
@@ -966,24 +1021,23 @@ img {
     line-height: 21px;
     font-weight: bold;
     color: #ffffff;
-    text-align: left;
-    width: 110px;
-    height: 27px;
+    text-align: center;
     background-color: #81b3d2;
+    padding: 5px 10px;
 }
 .hotel-description .booking {
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
     color: #ffffff;
-    text-align: left;
-    width: 142px;
-    height: 27px;
+    text-align: center;
     background-color:#766357;
+    padding: 5px 10px;
 }
 
 a.detailed:hover,
 a.detailed:focus {
+    color: #ffffff;
     background-color: #669ec0;
 }
 
@@ -994,6 +1048,7 @@ a.detailed:focus {
 
 a.booking:hover,
 a.booking:focus {
+    color: #ffffff;
     background-color: #604e43;
 }
 
