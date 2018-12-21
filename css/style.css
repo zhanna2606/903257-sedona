@@ -905,51 +905,65 @@ img {
 .title-line {
     display: flex;
     border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    padding: 30px 70px;
 }
 
 .title-line p {
+    display: flex;
+    align-items: center;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    padding: 30px 70px;
+    margin: 0;
+}
+
+.title-line ul {
+    margin: 0;
+    padding-left: 30px;
 }
 
 .results-sort {
     display: flex;
-    width: 370px;
     justify-content: space-between;
-    padding: 40px;
+    align-items: center;
+    width: 430px;
     text-decoration: none;
     list-style: none;
 }
 
-.result-sort a:active {
+.results-sort a {
+    color: rgba(0,0,0,0.3);
+    border-bottom: 1px dotted #81b3d2;
+}
+
+.results-sort a:active {
     color: #81b3d2;
 }
 
+.sort-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 80px;
+}
 
-
-/*   отложила пока стрелки сортировки, не получается
 .icon-up-dir {
-    position: absolute;
-    width: 11px;
-    height: 10px;
-    background-image: url("../svg-sedona/icon-up-dir.svg");
-    background-repeat: no-repeat;
-    background-position: 906px 40px;
-   
+    padding-right: 12px;
 }
 
-.icon-down-dir {
-    position: absolute;
-    width: 11px;
-    height: 10px;
-    background-image: url("../svg-sedona/icon-down-dir.svg");
-    background-repeat: no-repeat;
-     background-position: 930px 40px;
-  
+
+.icon-up-dir::before {
+    content: url("../svg-sedona/icon-up-dir.svg");
+    
 }
-*/
+
+.icon-down-dir::before {
+    content: url("../svg-sedona/icon-down-dir.svg");
+}
+
+
+                /* -СПИСОК ОТЕЛЕЙ КОТОРЫЙ ВЫДАЕТ ПОИСК*/
 .catalog-list {
     padding: 0;
     margin: 0;
@@ -1022,20 +1036,8 @@ img {
 }
 
 .catalog-item-price {
-    padding: 5px 5px 5px 0;
-}
-
-.raiting {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 35px 70px 25px 250px;
-}
-
-
-.catalog-item-price {
     width: 150px;
-    padding: 5px left;
+    padding: 5px 5px 5px 0;
 }
 
 .hotel-description .detailed {
@@ -1079,11 +1081,24 @@ a.booking:active {
     background-color: #503e33;
 }
 
+.raiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px 70px 25px 250px;
+}
+
+.stars {
+    text-align: end;
+}
+
+
 .hotel-raiting {
     width: 110px;
     background-color: #f2f2f2;
     color: #666666;
     text-align: center;
+    margin: 0;
     padding: 5px 10px;
 }
 
