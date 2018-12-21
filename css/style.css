@@ -132,14 +132,16 @@ img {
     color: #000000;
 }
 .about-city-top {
+    margin: 0;
     font-size: 21px;
     font-weight: bold;
-    padding: 60px 300px 0 300px;
+    padding: 60px 300px 38px 300px;
 }
 
 .about-city-desc {
     color: #333333;
-    padding: 40px 300px;
+    margin: 0;
+    padding-bottom: 50px;
 }
 
 
@@ -190,6 +192,8 @@ img {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
+    margin: 0;
+    padding: 30px 0 0 0 ;
 }
 
 .features-list {
@@ -286,11 +290,13 @@ img {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
+    margin: 0;
 
 }
 
 .number {
-    padding: 20px;
+    margin: 0;
+    padding: 30px;
 }
 
 
@@ -306,7 +312,7 @@ img {
     font-weight: bold;
     line-height: 36px;
     text-align: center;
-    padding: 50px 0 10px 0;
+    padding: 57px 0 52px 0;
    
 }
 
@@ -315,7 +321,8 @@ img {
     font-weight: normal;
     line-height: 24px;
     color: #333333;
-    padding: 20px 300px;
+    margin: 0;
+    padding: 30px 300px 0 300px;
 }
 
 .button-search {
@@ -383,8 +390,8 @@ img {
 }
 
 .hashtag {
-    width: 136px;
-    height: 16px;
+    display: flex;
+    align-items: center;
     font-size: 21px;
     font-weight: bold;
     font-style: normal;
@@ -394,9 +401,12 @@ img {
 }
 
 
-.footer-social {  
+.footer-social {
+    display: flex;
+    align-items: center;  
     width: 150px;
     text-align: center;
+    padding-left: 60px;
 }
 
 .footer-social ul {
@@ -439,6 +449,7 @@ img {
 .footer-copyright {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
@@ -446,6 +457,13 @@ img {
 }
 
 .footer-copyright p {
+    margin: 0;
+    padding-right: 8px;
+}
+
+.button-copyright {
+    display: flex;
+    align-items: center;
 }
 
 .footer-copyright svg {
@@ -453,7 +471,6 @@ img {
     height: 41px;
     fill: #231f20;
     background: #FFF;
-    padding: 8px;
 }
 
 .footer-copyright svg:hover, 
@@ -492,6 +509,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     padding: 55px 45px;
 }
 
@@ -676,7 +698,7 @@ img {
 .filter-infrastructure h2,
 .filter-house h2 {
     margin: 0;
-    padding-bottom: 20px;
+    padding: 10px 0 10px 0;
 }
 
 .infrastructure-item,
