@@ -15,7 +15,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    box-shadow: 0px 5px 15px 0; 
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 
@@ -154,8 +154,9 @@ img {
 
 .description-city {
     width: 400px;
+    box-sizing: border-box;
     text-align: center;
-    padding: 46px 60px 58px 60px;
+    padding: 46px 60px 64px 60px;
 }
 
 .description-city h2 {
@@ -167,7 +168,7 @@ img {
 
 .city-number {
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
 
 .description {
@@ -241,8 +242,9 @@ img {
 
 .description-bridge {
     width: 400px;
+    box-sizing: border-box;
     text-align: center;
-    padding: 40px 30px 50px 25px;
+    padding: 49px 30px 60px 30px;
 }
 
 .description-bridge h2 {
@@ -254,12 +256,14 @@ img {
 
 .bridge-number {
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
+
+
 
 .photo-bridge {
     width: 800px;
-    height: 244px;
+    height: 256px;
 }
 
 
@@ -581,6 +585,9 @@ img {
 
 .visitor-item {
     display: flex;
+    align-items: center;
+
+
 }
 
 .adult {
@@ -725,10 +732,6 @@ img {
   color: #ffffff;
 }
 
-.filter-input:disabled {
-    color: #6a6a6a;
-}
-
 .filter-checkbox + label::before {
     content: url("../svg-sedona/checkbox-off.svg");
     position: absolute;
@@ -742,6 +745,10 @@ img {
     position: absolute;
     left: -45px;
     top: 0;
+}
+
+.filter-input:disabled + label {
+    color: #6a6a6a;
 }
 
 
@@ -850,27 +857,29 @@ img {
 
 .range-toggle {
     position: absolute;
-  top: -9px;
-  width: 4px;
-  height: 4px;
+    top: -9px;
+    width: 4px;
+    height: 4px;
 
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+    width: 6px;
+    height: 6px;
+    background: #1c4f80;
 }
 
 .range-toggle-min {
-  left: 0;
+    left: 0;
 }
 
 .range-toggle-max {
-  left: 80%;
+    left: 80%;
 }
 
 .btn-transparent {
@@ -937,15 +946,17 @@ img {
     border-bottom: 1px dotted #81b3d2;
 }
 
-.results-sort a:active {
+.results-sort .is-active {
     color: #81b3d2;
+    border: none;
 }
 
 .sort-icon {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     position: absolute;
-    right: 80px;
+    right: 70px;
 }
 
 .icon-up-dir {
@@ -953,14 +964,8 @@ img {
 }
 
 
-.icon-up-dir::before {
-    content: url("../svg-sedona/icon-up-dir.svg");
-    
-}
 
-.icon-down-dir::before {
-    content: url("../svg-sedona/icon-down-dir.svg");
-}
+
 
 
                 /* -СПИСОК ОТЕЛЕЙ КОТОРЫЙ ВЫДАЕТ ПОИСК*/
