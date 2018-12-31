@@ -489,15 +489,12 @@ img {
 /*-------------МОДАЛЬНАЯ ФОРМА ПОИСКА НА ГЛАВНОЙ СТРАНИЦЕ--------*/
 
 
-
 .modal-search-form {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    /*left: 331px;  тут не пойму как  правильно выровнять под кнопку поиска 
-    right: 331px;*/
     z-index: 1;
     color: #000000;
     background-color: #FFF;
@@ -506,7 +503,6 @@ img {
     text-align: left;
     width: 568px;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-
 }
 
 .filter {
