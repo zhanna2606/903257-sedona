@@ -1,0 +1,40 @@
+ <section class="modal modal-search-form">
+      <h2 class="visually-hidden">Форма поиска отеля</h2>
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+        <p class="filter-item">
+          <label class="date-check-in">Дата заезда:</label>
+          <input class="calendar" type="text" required name="date-check-in" value="24 апреля 2017">
+        </p>
+        <p class="filter-item">
+          <label class="date-check-out">Дата выезда:</label>
+          <input class="calendar" type="text" required name="date-check-out" value="4 июля 2017">
+        </p>
+        <div class="visitors">
+          <div class="visitor-item">
+            <label for="adult" class="adult">Взрослые:</label>
+            <div class="box">
+              <button class="minus" type="button" name="minus">
+                <span class="visually-hidden">уменьшить количество на единицу</span>
+              </button>
+              <input class="sum" type="text" id="adult" required name="adult" value="2">
+              <button class="plus" type="button" name="plus">
+                <span class="visually-hidden">увеличить количество на единицу</span>
+              </button>
+            </div>
+          </div>
+          <div class="visitor-item">
+            <label for="children" class="children">Дети:</label>
+            <div class="box">
+              <button class="minus" type="button" name="minus">
+                <span class="visually-hidden">уменьшить количество на единицу</span>
+                -</button>
+              <input class="sum" type="text" id="children" required name="children" value="0">
+              <button class="plus" type="button" name="plus">
+                <span class="visually-hidden">увеличить количество на единицу</span>
+                +</button>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="search" aria-label="Начать поиск">Найти</button>
+      </form>
+    </section>
