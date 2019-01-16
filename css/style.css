@@ -18,7 +18,6 @@ body {
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-
 a {
     text-decoration: none;
 }
@@ -50,7 +49,6 @@ img {
     display: flex;
     padding: 0;
     margin: 0;
-
     list-style: none;
 }
 
@@ -69,13 +67,11 @@ img {
     text-align: right;
 }
 
-
-
 .site-navigation a{
     display: block;
-
     color: #000000;
 }
+
 .site-navigation a:hover,
 .site-navigation a:focus {
     color: #81b3d2;
@@ -84,6 +80,7 @@ img {
 .site-navigation a:active {
     color: rgba(0, 0, 0, 0.3);
 }
+
 .site-navigation-current a{
     color: #766357;
 }
@@ -123,7 +120,6 @@ img {
     background-size: 100% 59px;
 }
 
-
 /* ---------------Преимущества---------------*/
 .about-city {
     margin: 0;
@@ -131,6 +127,7 @@ img {
     line-height: 26px;
     color: #000000;
 }
+
 .about-city-top {
     margin: 0;
     font-size: 21px;
@@ -144,13 +141,11 @@ img {
     padding-bottom: 50px;
 }
 
-
 .advantage-city {
     display: flex;
     color: #ffffff;
     background-color: #81b3d2;
 }
-
 
 .description-city {
     width: 400px;
@@ -181,9 +176,7 @@ img {
     height: 256px;
 }
 
-
-/*------------------Особенности -------------------*/
-    
+/*------------------Особенности -------------------*/ 
 .features-item {
     list-style: none;
     font-size: 21px;
@@ -194,6 +187,7 @@ img {
     font-size: 21px;
     font-weight: bold;
 }
+
 .features-item p {
     font-size: 14px;
     font-weight: normal;
@@ -235,10 +229,7 @@ img {
     background-repeat: no-repeat;
 }
 
-
 /* ---------------------Мост дьявола--------------*/
-
-
 .advantage-bridge {
     display: flex;
     color: #ffffff;
@@ -264,16 +255,12 @@ img {
     padding: 30px;
 }
 
-
-
 .photo-bridge {
     width: 800px;
     height: 256px;
 }
 
-
 /* -----------------------Достопримечательности-------*/
-
 .attractions {
     background-color: #eeeeee;
 }
@@ -294,13 +281,11 @@ img {
     font-weight: bold;
 }
 
-
 .attraction-item p{
     font-size: 14px;
     font-weight: normal;
     color: #333333;
     margin: 0;
-
 }
 
 .number {
@@ -308,9 +293,7 @@ img {
     padding: 30px;
 }
 
-
 /*-------------------------Поиск отеля---------------------*/
-
 .search-hotel {
     display: flex;
     flex-direction: column;
@@ -322,7 +305,6 @@ img {
     line-height: 36px;
     text-align: center;
     padding: 57px 0 52px 0;
-   
 }
 
 .interest p {
@@ -346,32 +328,23 @@ img {
     margin: 0 auto;
 }
 
-.button-search p {
-    margin: 0;
-    padding: 30px 80px;
-}
-
-
 .button-search:hover,
 .button-search:focus {
     background-color: #604e43; 
 }
+
 .button-search:active {
     color: rgba(255,255,255, 0.3);
     background-color: #503e33;
 }
 
-
-
 /* ------------------------КАРТА----------------------------*/
-
 .map {
     position: relative;
     width: 1200px;
     height: 593px;;
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
-
 }
 
 .map  .main-footer {
@@ -380,12 +353,9 @@ img {
     background: #FFF;
     opacity: 0.9;
     bottom: 0;
-
 }
 
-
 /* -------------------ФУТЕР СТРАНИЦ---------------*/
-
 .main-footer {
     padding: 0;
     margin: 0;
@@ -409,7 +379,6 @@ img {
     color: #000000;
 }
 
-
 .footer-social {
     display: flex;
     align-items: center;  
@@ -424,7 +393,6 @@ img {
     width: 150px;
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -435,14 +403,7 @@ img {
     width: 46px;
     height: 48px;
     background-color: #81b3d2;
-}
-
-
-.footer-social a {
-    width: 46px;
-    height: 48px;
     fill: #FFF;
-    background-color: #81b3d2;
 }
 
 .footer-social a:hover,
@@ -450,9 +411,12 @@ img {
     background-color: #669ec0;
 }
 
-.footer-social svg:active{
-    opacity: 0.3;
+.footer-social a:active{
     background-color: #5496bd;
+}
+
+.footer-social a:active svg {
+    opacity: 0.3;
 }
 
 .footer-copyright {
@@ -492,8 +456,6 @@ img {
 }
 
 /*-------------МОДАЛЬНАЯ ФОРМА ПОИСКА НА ГЛАВНОЙ СТРАНИЦЕ--------*/
-
-
 .modal-search-form {
     position: absolute;
     margin-left: auto;
@@ -536,104 +498,92 @@ img {
 
 .date-check-in {
     width: 112px;
-   
 }
 .date-check-out {
     width: 112px;
 }
 
-.check-in {
+.calendar-container {
+    display: flex;
+    width: 346px;
+    height: 38px;
+}
+
+.calendar-container input {
     width: 346px;
     height: 38px;
     background-color: #f2f2f2;
     box-sizing: border-box;
     border: none;
-    padding: 12px 14px;
+    padding-left: 12px;
 }
 
-.check-in input {
-    width: 100%;
-    height: 100%;
-}
-
-.check-out {
-    width: 346px;
-    height: 38px;
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    border: none;
-    padding: 12px 14px;
-}
-
-.check-out input {
-    width: 100%;
-    height: 100%;
-}
-
-.icon-calendar {
-    position: absolute;
-    background-image: url(../svg-sedona/calendar.svg);
-    width: 25px;
-    height: 25px;
-}
-
-.filter-item input:hover {
+.calendar-container input:hover {
     background-color: #ebebeb;
 }
 
-.filter-item input:focus {
+.calendar-container input:focus {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 }
-/*
+
+.calendar-icon {
+    border: none;
+    background-color:  #f2f2f2;
+    cursor: pointer;
+}
+
 .calendar {
     text-transform: uppercase;
+    text-align: left;
     font-weight: bold;
-    background-image: url("../svg-sedona/calendar.svg");
-    background-position: 310px center;
-    background-repeat: no-repeat;
-    background-color: #cacaca;
 }
 
-.calendar:hover,
-.calendar:focus {
-    background-color: #000000;
+.calendar-icon svg {
+    width: 21px;
+    height: 22px;
+    fill: #cacaca; 
 }
 
-.calendar:active {
-    background-color: #81b3d2;
-}*/
+.calendar-icon svg:hover,
+.calendar-icon svg:focus {
+    fill: #000000;
+}
 
+.calendar-icon svg:active {
+    fill: #81b3d2;
+}
 
 .visitors {
     display: flex;
     justify-content: space-between;
     padding: 15px 0 50px 0;
+    width: 458px;
 }
 
 .visitor-item {
     display: flex;
     align-items: center;
-
-
 }
 
 .adult {
-    padding-right: 25px;
+    padding-right: 40px;
 }
 
 .children {
-    padding-left: 52px;
-    padding-right: 25px;
+    padding-right: 30px;
 }
 
 .box {
-    display: flex;   
+    display: flex;
+    padding-right: 0;
+    margin: 0;   
 }
 
 .plus,
 .minus {
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: bold;
     color:grey;
     width: 38px;
     height: 38px;
@@ -687,27 +637,16 @@ img {
 .search:active {
     font-size: 21px;
     color: rgba(255,255,255,0.3);
-    background-color: #5496bd;
-    
-    
+    background-color: #5496bd; 
 }
 
-
-
-
-
-
-
-
  /* ---------------------- inner.html ------------------------- */
-
-                        /*Фильтр поиска*/
-
 .filters {
     text-align: center;
     background: url("../img/filter-background.jpg") no-repeat;
     background-size: cover;
     background-position: center; 
+    background-color: #ffffff;
 }
 
  .filter-column {
@@ -743,22 +682,19 @@ img {
     font-weight: normal;
     padding: 15px 0 15px 45px;
     text-align: left;
-   
 }
 
 .infrastructure-item label,
 .house-item label {
     position: relative;
-
     display: block;
-
     cursor: pointer;
     user-select: none;
 }
 
 .filter-input:hover,
 .filter-input:focus {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .filter-checkbox + label::before {
@@ -770,7 +706,6 @@ img {
 
 .filter-checkbox:checked + label::after {
     content: url("../svg-sedona/checkbox-on.svg");
-
     position: absolute;
     left: -45px;
     top: 0;
@@ -779,7 +714,6 @@ img {
 .filter-input:disabled + label {
     color: #6a6a6a;
 }
-
 
 .filter-house {
     display: flex;
@@ -793,13 +727,7 @@ img {
     font-weight: bold;
 }
 
-
-                
-
-
 /*---------------------- стоимостmь суток----------------------*/
-
-
 .filter-range {
     width: 330px;
     color: #ffffff;
@@ -807,81 +735,69 @@ img {
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .price-controls {
     position: relative;
     height: 36px;
     margin-bottom: 20px;
-
-  font-size: 0;
-
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .price-controls::after {
-  content: "";
-  position: absolute;
+    content: "";
+    position: absolute;
     top: 50%;
-  left: 50%;
-
-  width: 2px;
-  height: 22px;
-
-  background: #ffffff;
-  transform: translate(-50%, -50%);
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-  display: inline-block;
-
-  font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-
-  cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+    width: 90px;
+    padding-left: 65px;
 }
 
 .price-controls input {
-  width: 50px;
-  margin: 0;
-
-  color: inherit;
-  font: inherit;
-
-  background: none;
-  border: none;
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
 }
 
 .range-controls {
-  position: relative;
-
-  margin-bottom: 32px;
+    position: relative;
+    margin-bottom: 32px;
 }
 
 .range-controls .scale {
-  height: 2px;
-
-  background: rgba(255, 255, 255, 0.3);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 80%;
-  height: 2px;
-
-  background: #ffffff;
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
 }
 
 .range-toggle {
@@ -889,7 +805,6 @@ img {
     top: -9px;
     width: 4px;
     height: 4px;
-
     background: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
@@ -912,29 +827,25 @@ img {
 }
 
 .btn-transparent {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
-
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .btn-transparent:hover {
-  color: #000000;
-
-  background: #ffffff;
+    color: #000000;
+    background: #ffffff;
 }
 
-
- /*---------------------------каталог отелей -------------------*/
+/*---------------------------каталог отелей -------------------*/
 .search-results {
     display: flex;
     flex-direction: column;
@@ -991,6 +902,16 @@ img {
     border: none;
 }
 
+.results-sort a:hover,
+.results-sort a:focus {
+    color: #81b3d2;
+}
+
+.results-sort a:active {
+    color:  #000000;
+    border: none;
+}
+
 .sort-icon {
     display: flex;
     justify-content: flex-start;d
@@ -1000,15 +921,24 @@ img {
 }
 
 .icon-up-dir {
+    fill: #cacaca;
     padding-right: 12px;
 }
 
+.icon-down-dir {
+    fill: #81b3d2;
+}
 
+.sort-icon svg:hover,
+.sort-icon svg:focus {
+    fill: #000000;
+}
 
+.sort-icon svg:active {
+    fill: #81b3d2;
+}
 
-
-
-                /* -СПИСОК ОТЕЛЕЙ КОТОРЫЙ ВЫДАЕТ ПОИСК*/
+/* ---------------СПИСОК ОТЕЛЕЙ КОТОРЫЙ ВЫДАЕТ ПОИСК----------*/
 .catalog-list {
     padding: 0;
     margin: 0;
@@ -1028,7 +958,6 @@ img {
     color: #333333;
 }
 
-
 .catalog-item-image {
     margin: 0;
     width: 135px;
@@ -1036,12 +965,10 @@ img {
     padding: 30px 30px 30px 70px;
 }
 
-
 .catalog-item {
     display: flex;
     border-bottom: 1px solid #e5e5e5;
 }
-
 
 .catalog-item a:hover,
 .catalog-item a:focus {
@@ -1137,7 +1064,6 @@ a.booking:active {
     text-align: end;
 }
 
-
 .hotel-raiting {
     width: 110px;
     background-color: #f2f2f2;
@@ -1150,19 +1076,16 @@ a.booking:active {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
