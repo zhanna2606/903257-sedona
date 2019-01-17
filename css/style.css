@@ -319,13 +319,18 @@ img {
 .button-search {
     position: relative;
     width: 568px;
-    height: 86px;
+    height: 86px;  
+    background-color: #766357;
+    margin: 0 auto;
+}
+
+.button-search h2 {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    color: #ffffff; 
-    background-color: #766357;
-    margin: 0 auto;
+    color: #ffffff;
+    margin: 0;
+    padding: 30px 0; 
 }
 
 .button-search:hover,
@@ -334,8 +339,11 @@ img {
 }
 
 .button-search:active {
-    color: rgba(255,255,255, 0.3);
     background-color: #503e33;
+}
+
+.button-search:active h2 {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* ------------------------КАРТА----------------------------*/
@@ -357,15 +365,12 @@ img {
 
 /* -------------------ФУТЕР СТРАНИЦ---------------*/
 .main-footer {
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
     margin: 0;
     opacity: 0.9;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 35px 100px;
+    padding: 40px 0; 
 }
 
 .hashtag {
@@ -384,7 +389,6 @@ img {
     align-items: center;  
     width: 150px;
     text-align: center;
-    padding-left: 60px;
 }
 
 .footer-social ul {
@@ -845,7 +849,7 @@ img {
     background: #ffffff;
 }
 
-/*---------------------------каталог отелей -------------------*/
+/*----------------каталог отелей -------------------*/
 .search-results {
     display: flex;
     flex-direction: column;
@@ -867,25 +871,26 @@ img {
     margin: 0;
 }
 
-.title-line ul {
+.title-line h3 {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: left;
+    padding-left: 50px;
     margin: 0;
-    padding-left: 30px;
 }
 
 .results-sort {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 430px;
+    width: 238px;
     text-decoration: none;
     list-style: none;
-}
-
-.results-sort h2 {
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 18px;
-    text-align: left;
+    margin: 0;
+    padding-left: 30px;
 }
 
 .results-sort a {
