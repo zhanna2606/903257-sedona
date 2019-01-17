@@ -318,19 +318,17 @@ img {
 
 .button-search {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 568px;
     height: 86px;  
     background-color: #766357;
     margin: 0 auto;
-}
-
-.button-search h2 {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
     color: #ffffff;
-    margin: 0;
-    padding: 30px 0; 
 }
 
 .button-search:hover,
@@ -339,11 +337,8 @@ img {
 }
 
 .button-search:active {
-    background-color: #503e33;
-}
-
-.button-search:active h2 {
     color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
 }
 
 /* ------------------------КАРТА----------------------------*/
