@@ -6,7 +6,7 @@
   <title>Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -19,6 +19,7 @@
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo-video.html">Фото и видео</a></li>
+          <li><a href="#"></a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="inner.html">Гостиницы</a></li>
         </ul>
@@ -27,7 +28,7 @@
     <main class="main-container">
       <div class="main-pic">
         <h1 class="visually-hidden">Седона</h1>
-        <img class="intro-welcome" src="svg-sedona/intro-welcome.svg" width="1201" height="59" alt="Welcome">
+        <img class="intro-welcome" src="svg-sedona/intro-welcome.svg" width="459" height="353" alt="Welcome">
       </div>
       <section class="about-city">
         <h2 class="about-city-top">Седона — небольшой городок в Аризоне,
@@ -68,23 +69,26 @@
         <div class="description-bridge">
           <h2>Там есть Мост дьявола</h2>
           <p class="bridge-number">— №2 —</p>
-          <p class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <p class="bridge-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </section>
       <section class="attractions">
         <h2 class="visually-hidden">Достопримечательности</h2>
         <ul class="attractions-list">
-          <li class="attraction-item">Небольшая площадь
+          <li class="attraction-item">
+            <h2>Небольшая площадь</h2>
             <p class="number">— №3 — </p>
-            <p>Все достопримечательности находятся очень близко</p>
+            <p class="desc">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="attraction-item">Красивая дорога
+          <li class="attraction-item">
+            <h2>Красивая дорога</h2>
             <p class="number">— №4 — </p>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="attraction-item">Мало туристов
+          <li class="attraction-item">
+            <h2>Мало туристов</h2>
             <p class="number">— №5 — </p>
-            <p>Большинство едет в гранд каньон и толпится там</p>
+            <p class="desc">Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ul>
       </section>
@@ -96,7 +100,7 @@
         <a class="button-search" href="search-form.html">Поиск гостиницы в Седоне</a>
       </section>
     </main>
-    <section class="modal modal-search-form">
+    <section class="modal modal-search-form" hidden>
       <h2 class="visually-hidden">Форма поиска отеля</h2>
       <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <div class="filter-item">
@@ -153,6 +157,8 @@
       </form>
     </section>
     <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52374.05705347713!2d-111.74707372263879!3d34.87183898106126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1548150077017"
+        width="1200" height="593" style="border:0" allowfullscreen></iframe>
       <footer class="main-footer">
         <a class="hashtag" href="#" aria-label="хэштег">#visitsedona</a>
         <div class="footer-social">
@@ -195,6 +201,7 @@
       </footer>
     </div>
   </div>
+  <script src="js/js.min.js"></script>
 </body>
 
 </html>
